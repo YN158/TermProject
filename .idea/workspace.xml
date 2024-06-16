@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cc95419-82d4-4cc3-b2ee-9d1776b196aa" name="Changes" comment="Created the main classes">
+    <list default="true" id="0cc95419-82d4-4cc3-b2ee-9d1776b196aa" name="Changes" comment="the main classes defined">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CCM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/CCM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Video.java" afterDir="false" />
     </list>
@@ -48,16 +45,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Gradle.TermProject [:Main.main()].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/University/Advanced Programming/Assignments/Norooz"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Gradle.TermProject [:Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/University/Advanced Programming/Assignments/Norooz&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -98,7 +95,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718175471111</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="the main classes defined">
+      <option name="closed" value="true" />
+      <created>1718180559957</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1718180559957</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -106,6 +111,7 @@
     <MESSAGE value="initial coomit" />
     <MESSAGE value="initial coomit 2! (I fucking love how intelij just makes up random files, like where TF did this one come from)" />
     <MESSAGE value="Created the main classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created the main classes" />
+    <MESSAGE value="the main classes defined" />
+    <option name="LAST_COMMIT_MESSAGE" value="the main classes defined" />
   </component>
 </project>

@@ -12,7 +12,7 @@ public class Video
     ArrayList<String> viewers;                       //to store the ID of the users which have viewed the video followed by either 0 for no like or dislike, 1 for like and 2 for dislike (this is prone to change)
     int likes;                                       //to store the number of likes
     int dislike;                                     //to store the number of dislikes
-    String thumbnail;                                //this is a placeholder
+    String thumbnail;                                //this is a placeholder and will be replaced by the correct format/variable type
 
     public Video()
     {
