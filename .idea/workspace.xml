@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cc95419-82d4-4cc3-b2ee-9d1776b196aa" name="Changes" comment="fixed the space thingy on the comments&#10;(not of any bloody importance... I'm just hella autistic :3)">
+    <list default="true" id="0cc95419-82d4-4cc3-b2ee-9d1776b196aa" name="Changes" comment="Just cleaning up">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Video.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -127,7 +126,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718541186894</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Just cleaning up">
+      <option name="closed" value="true" />
+      <created>1718541349635</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1718541349635</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -139,6 +146,7 @@
     <MESSAGE value="Added the email and password variable to the User class &#10;(I forgor)" />
     <MESSAGE value="Added the &quot;correct&quot; type for User Icon and Video thumbnail.&#10;(these are still prone to change)" />
     <MESSAGE value="fixed the space thingy on the comments&#10;(not of any bloody importance... I'm just hella autistic :3)" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed the space thingy on the comments&#10;(not of any bloody importance... I'm just hella autistic :3)" />
+    <MESSAGE value="Just cleaning up" />
+    <option name="LAST_COMMIT_MESSAGE" value="Just cleaning up" />
   </component>
 </project>
