@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cc95419-82d4-4cc3-b2ee-9d1776b196aa" name="Changes" comment="initial commit of the merge into develop">
+    <list default="true" id="0cc95419-82d4-4cc3-b2ee-9d1776b196aa" name="Changes" comment="Initial commit of the GUI branch">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/GUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +151,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718613764208</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Initial commit of the GUI branch">
+      <option name="closed" value="true" />
+      <created>1718627325007</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1718627325007</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -164,6 +174,7 @@
     <MESSAGE value="Just cleaning up" />
     <MESSAGE value="Configured a type for the video file in the Video class." />
     <MESSAGE value="initial commit of the merge into develop" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit of the merge into develop" />
+    <MESSAGE value="Initial commit of the GUI branch" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit of the GUI branch" />
   </component>
 </project>

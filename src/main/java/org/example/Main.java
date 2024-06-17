@@ -5,6 +5,6 @@ public class Main
     static CCM ccm;
     public static void main(String[] args)
     {
-        System.out.println("BANANA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");   
+        GUI gui = new GUI("TOE TUBE", ccm);
     }
 }
