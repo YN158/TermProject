@@ -1,10 +1,13 @@
 package org.example;
+
+import org.example.panels.StartPanel;
 import javax.swing.*;
-import java.awt.event.WindowEvent;
 
 public class GUI                           //this class holds all the needed panels and acts as a manager to them
 {
-    JFrame frame;
+    public JFrame frame;
+
+    JPanel startPanel;
 
     CCM centralClassManager;
 
@@ -13,6 +16,10 @@ public class GUI                           //this class holds all the needed pan
         centralClassManager = ccm;
 
         frame = new JFrame(name);
+
+        startPanel = new StartPanel(this);
+
+        frame.add(startPanel);
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(null);

@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0cc95419-82d4-4cc3-b2ee-9d1776b196aa" name="Changes" comment="Initial commit of the GUI branch">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/GUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/panels/StartPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

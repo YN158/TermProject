@@ -5,6 +5,6 @@ public class Main
     static CCM ccm;
     public static void main(String[] args)
     {
-        GUI gui = new GUI("TOE TUBE", ccm);
+        GUI gui = new GUI("TUBE", ccm);
     }
 }
