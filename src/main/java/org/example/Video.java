@@ -15,7 +15,6 @@ public class Video
     int likes;                                       //to store the number of likes
     int dislike;                                     //to store the number of dislikes
     Image thumbnail;                                 //this is a placeholder and will be replaced by the correct format/variable type
-    Blob videoData;                                  //this variable holds the raw Blob data of the video from database which must then be converted into video to be played or streamed (this is prone to change)
 
     public Video()
     {
