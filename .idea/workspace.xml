@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0cc95419-82d4-4cc3-b2ee-9d1776b196aa" name="Changes" comment="Configured a type for the video file in the Video class.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Video.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +141,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718542807023</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Removed the Blob videFile variable form the Video class &#10;(we'll just save the video locally fuck this shit)">
+      <option name="closed" value="true" />
+      <created>1718951812503</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1718951812503</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -155,6 +163,7 @@
     <MESSAGE value="fixed the space thingy on the comments&#10;(not of any bloody importance... I'm just hella autistic :3)" />
     <MESSAGE value="Just cleaning up" />
     <MESSAGE value="Configured a type for the video file in the Video class." />
-    <option name="LAST_COMMIT_MESSAGE" value="Configured a type for the video file in the Video class." />
+    <MESSAGE value="Removed the Blob videFile variable form the Video class &#10;(we'll just save the video locally fuck this shit)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed the Blob videFile variable form the Video class &#10;(we'll just save the video locally fuck this shit)" />
   </component>
 </project>
