@@ -3,7 +3,7 @@ package org.example.NetWork;
 import java.io.*;
 import java.net.*;
 
-class Server implements Runnable {
+public class Server implements Runnable {
     public static final int port = 9090;
 
 
@@ -21,6 +21,10 @@ class Server implements Runnable {
                                     new ObjectInputStream( client.getInputStream() );
                             String msg = (String) in.readObject();
                             System.out.println(msg + " nn");
+                            if (msg.equals("Hello !"))
+                            {
+                                System.out.println("baaaaa");
+                            }
                         }
                         catch(Exception e){System.err.println(e);}
 
