@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cc95419-82d4-4cc3-b2ee-9d1776b196aa" name="Changes" comment="Configured a type for the video file in the Video class.">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Video.java" afterDir="false" />
+    <list default="true" id="0cc95419-82d4-4cc3-b2ee-9d1776b196aa" name="Changes" comment="initial commit of the Client and Server Branch&#10;(This branch is dedicated to developing the server and client side of the program)">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/NetWork/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/NetWork/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,16 +45,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Gradle.TermProject [:Main.main()].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/University/Advanced Programming/Assignments/Norooz&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Gradle.TermProject [:Main.main()].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/University/Advanced Programming/Assignments/TermProjectTest/TermProjectPractive"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -149,7 +151,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718951812503</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="initial commit of the Client and Server Branch&#10;(This branch is dedicated to developing the server and client side of the program)">
+      <option name="closed" value="true" />
+      <created>1718951856195</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1718951856195</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -164,6 +174,7 @@
     <MESSAGE value="Just cleaning up" />
     <MESSAGE value="Configured a type for the video file in the Video class." />
     <MESSAGE value="Removed the Blob videFile variable form the Video class &#10;(we'll just save the video locally fuck this shit)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed the Blob videFile variable form the Video class &#10;(we'll just save the video locally fuck this shit)" />
+    <MESSAGE value="initial commit of the Client and Server Branch&#10;(This branch is dedicated to developing the server and client side of the program)" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit of the Client and Server Branch&#10;(This branch is dedicated to developing the server and client side of the program)" />
   </component>
 </project>
