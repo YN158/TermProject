@@ -49,7 +49,7 @@ public class StartPanel extends JPanel
         add(button2);
         add(button3);
         add(label1);
-        setVisible(false);
+        setVisible(true);
         setSize(1550, 838);
     }
 }

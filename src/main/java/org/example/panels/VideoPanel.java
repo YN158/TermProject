@@ -29,7 +29,7 @@ public class VideoPanel extends JPanel
             e.printStackTrace();
         }*/
 
-        setVisible(true);
+        setVisible(false);
         setSize(1550, 838);
     }
 }
