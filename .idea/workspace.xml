@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cc95419-82d4-4cc3-b2ee-9d1776b196aa" name="Changes" comment="Tested the Client and Server in the Main file&#10;It wowked :3">
+    <list default="true" id="0cc95419-82d4-4cc3-b2ee-9d1776b196aa" name="Changes" comment="Implimented the MangoDB database">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/NetWork/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/NetWork/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,16 +43,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Gradle.TermProject [:Main.main()].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/University/Advanced Programming/Assignments/TermProject/TermProject"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Gradle.TermProject [:Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/University/Advanced Programming/Assignments/TermProject/TermProject&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -175,7 +173,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718953276985</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Implimented the MangoDB database">
+      <option name="closed" value="true" />
+      <created>1719473995105</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1719473995105</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -193,6 +199,7 @@
     <MESSAGE value="initial commit of the Client and Server Branch&#10;(This branch is dedicated to developing the server and client side of the program)" />
     <MESSAGE value="Implemented the Server and Client Class.&#10;(for the time being the Client can only send a message which the server prints, this is just a simple test and will be changed)" />
     <MESSAGE value="Tested the Client and Server in the Main file&#10;It wowked :3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tested the Client and Server in the Main file&#10;It wowked :3" />
+    <MESSAGE value="Implimented the MangoDB database" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implimented the MangoDB database" />
   </component>
 </project>
