@@ -9,41 +9,32 @@ import javax.media.Manager;
 import javax.media.Player;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
+import javax.swing.SwingUtilities;
+
+import uk.co.caprica.vlcj.factory.MediaPlayerFactory;
+import uk.co.caprica.vlcj.player.component.EmbeddedMediaPlayerComponent;
+import uk.co.caprica.vlcj.player.embedded.EmbeddedMediaPlayer;
 
 
 public class VideoPanel extends JPanel
 {
-
+    private final EmbeddedMediaPlayerComponent mediaPlayerComponent;
     public VideoPanel(GUI gui)
     {
-        setLayout(null);
+        setLayout(new BorderLayout());
 
-        /*try {
-            Manager.setHint(Manager.LIGHTWEIGHT_RENDERER, true);
-            Player mediaPlayer = Manager.createRealizedPlayer(mediaURL);
-            Component video = mediaPlayer.getVisualComponent();
-            Component controls = mediaPlayer.getControlPanelComponent();
+        mediaPlayerComponent = new EmbeddedMediaPlayerComponent();
+        mediaPlayerComponent.setPreferredSize(new Dimension(300, 300));
 
-            if (video != null)
+        add(mediaPlayerComponent, BorderLayout.CENTER);
 
-                add(video, BorderLayout.CENTER);
-
-            if (controls != null)
-                add(controls, BorderLayout.SOUTH);
-
-            mediaPlayer.start();
-        } catch (NoPlayerException noPlayerException) {
-            System.err.println("No media player found");
-        } // end catch
-        catch (CannotRealizeException cannotRealizeException) {
-            System.err.println("Could not realize media player");
-        } // end catch
-        catch (IOException iOException) {
-            System.err.println("Error reading from the source");
-        }*/
-
-        setVisible(true);
+        setVisible(false);
         setSize(1550, 838);
+    }
+
+    public void playVideo(String videoPath)
+    {
+        mediaPlayerComponent.mediaPlayer().media().start(videoPath);
     }
 
     public void refresh()
