@@ -32,4 +32,9 @@ public class VideoPanel extends JPanel
         setVisible(false);
         setSize(1550, 838);
     }
+
+    public void refresh()
+    {
+
+    }
 }

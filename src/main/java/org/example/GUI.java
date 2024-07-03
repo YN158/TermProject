@@ -1,7 +1,6 @@
 package org.example;
 
-import org.example.panels.StartPanel;
-import org.example.panels.VideoPanel;
+import org.example.panels.*;
 
 import javax.swing.*;
 
@@ -9,10 +8,14 @@ public class GUI                           //this class holds all the needed pan
 {
     public JFrame frame;
 
-    JPanel startPanel;
-    JPanel videoPanel;
+    public JPanel startPanel;
+    public JPanel videoPanel;
+    public JPanel mainDashboardPanel;
+    public JPanel newAccountPanel;
+    public JPanel channelPanel;
+    public JPanel loginPanel;
 
-    CCM centralClassManager;
+    public CCM centralClassManager;
 
     public GUI(String name, CCM ccm)
     {
@@ -22,9 +25,17 @@ public class GUI                           //this class holds all the needed pan
 
         startPanel = new StartPanel(this);
         videoPanel = new VideoPanel(this);
+        mainDashboardPanel = new MainDashboardPanel(this);
+        newAccountPanel = new NewAccountPanel(this);
+        channelPanel = new ChannelPanel(this);
+        loginPanel = new LogInPanel(this);
 
         frame.add(startPanel);
         frame.add(videoPanel);
+        frame.add(mainDashboardPanel);
+        frame.add(newAccountPanel);
+        frame.add(channelPanel);
+        frame.add(loginPanel);
 
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

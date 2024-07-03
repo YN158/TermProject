@@ -18,4 +18,9 @@ public class User
     {
 
     }
+
+    public String GetID()
+    {
+        return ID;
+    }
 }
