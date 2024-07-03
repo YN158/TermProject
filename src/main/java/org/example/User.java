@@ -14,13 +14,26 @@ public class User
     Image icon;                                      //this is a placeholder and will be replaced by the correct format/variable type
 
 
-    public User()
+    public User(String id, String em, String pw)
     {
-
+        ID = id;
+        email = em;
+        password = pw;
     }
 
     public String GetID()
     {
         return ID;
+    }
+
+    public void SetToDefault()
+    {
+        ID = "";
+        email = "";
+        password = "";
+        videoIDs = null;
+        subscriberIDs = null;
+        subscriptionIDs = null;
+        icon = null;
     }
 }

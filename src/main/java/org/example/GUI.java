@@ -8,12 +8,12 @@ public class GUI                           //this class holds all the needed pan
 {
     public JFrame frame;
 
-    public JPanel startPanel;
-    public JPanel videoPanel;
-    public JPanel mainDashboardPanel;
-    public JPanel newAccountPanel;
-    public JPanel channelPanel;
-    public JPanel loginPanel;
+    public StartPanel startPanel;
+    public VideoPanel videoPanel;
+    public MainDashboardPanel mainDashboardPanel;
+    public NewAccountPanel newAccountPanel;
+    public ChannelPanel channelPanel;
+    public LogInPanel loginPanel;
 
     public CCM centralClassManager;
 

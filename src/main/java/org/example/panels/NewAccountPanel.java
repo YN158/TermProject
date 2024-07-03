@@ -1,8 +1,10 @@
 package org.example.panels;
 
 import org.example.GUI;
+import org.example.User;
 
 import javax.swing.*;
+import java.awt.event.WindowEvent;
 
 public class NewAccountPanel  extends JPanel
 {
@@ -55,6 +57,27 @@ public class NewAccountPanel  extends JPanel
         exit = new JButton("exit");
         exit.setBounds(160,490, 250, 40);
         add(exit);
+
+        create.addActionListener(e ->
+        {
+            if (!nametext.getText().equals("") && !passwordtext.getText().equals("") && !emailtext.getText().equals(""))
+            {
+                gui.centralClassManager.activeUser = new User(nametext.getText(), emailtext.getText(), passwordtext.getText());
+                setVisible(false);
+                gui.mainDashboardPanel.refresh();
+                gui.mainDashboardPanel.setVisible(true);
+            }
+            else
+            {
+                statues.setText("Please Fill all the areas");
+            }
+        });
+
+        exit.addActionListener(e ->
+        {
+            setVisible(false);
+            gui.startPanel.setVisible(true);
+        });
 
 
         setVisible(false);
