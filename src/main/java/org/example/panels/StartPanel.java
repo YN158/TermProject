@@ -43,11 +43,12 @@ public class StartPanel extends JPanel
 
         button1.addActionListener(e ->
         {
-            gui.mainDashboardPanel.setVisible(true);
+            gui.loginPanel.setVisible(true);
             setVisible(false);
         });
         button2.addActionListener(e ->
         {
+            gui.newAccountPanel.setVisible(true);
             setVisible(false);
         });
         button3.addActionListener(e ->
