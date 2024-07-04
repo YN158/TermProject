@@ -43,7 +43,9 @@ public class StartPanel extends JPanel
 
         button1.addActionListener(e ->
         {
-            gui.loginPanel.setVisible(true);
+            gui.videoPanel.setVisible(true);
+            gui.videoPanel.playVideo("D:\\University\\Advanced Programming\\Assignments\\TermProject\\TermProject\\Videos\\1805508841901375553_1.mp4");
+            //gui.loginPanel.setVisible(true);
             setVisible(false);
         });
         button2.addActionListener(e ->

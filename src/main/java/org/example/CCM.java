@@ -8,6 +8,7 @@ public class CCM                                     //CCM of Central Class Mana
     public Video activeVideo;                               //used to store the data of the video which is currently active
     public ArrayList<String> videoID;                       //used to store the IDs of multiple videos if ever needed
     public ArrayList<String> userID;                        //used to store the IDs of multiple users if ever needed
+    public ArrayList<String> commentID;                     //used to store the IDs of multiple comments if ever needed
 
 
     public CCM()
