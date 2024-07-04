@@ -87,7 +87,8 @@ public class MainDashboardPanel extends JPanel
         panelNorth.add(uploadButton);
         uploadButton.addActionListener(e ->
         {
-
+            setVisible(false);
+            gui.uploadVideoPanel.setVisible(true);
         });
 
 

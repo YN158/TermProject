@@ -19,11 +19,19 @@ public class User
         ID = id;
         email = em;
         password = pw;
+        videoIDs = new ArrayList<String>();
+        subscriptionIDs = new ArrayList<String>();
+        subscriberIDs = new ArrayList<String>();
     }
 
     public String GetID()
     {
         return ID;
+    }
+
+    public void addVideo(String vidID)
+    {
+        videoIDs.add(vidID);
     }
 
     public void SetToDefault()
@@ -35,5 +43,8 @@ public class User
         subscriberIDs = null;
         subscriptionIDs = null;
         icon = null;
+        videoIDs = new ArrayList<String>();
+        subscriptionIDs = new ArrayList<String>();
+        subscriberIDs = new ArrayList<String>();
     }
 }

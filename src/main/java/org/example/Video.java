@@ -8,6 +8,7 @@ public class Video
 {
     String ID;
     String channelID;                                //the ID of the channel which uploaded the video
+    String videoPath;
     String title;
     String description;
     ArrayList<String> commentIDs;                    //the ID of the comments under the video, the order in the array list is better to also follow the order which the comments have been made
@@ -16,8 +17,11 @@ public class Video
     int dislike;                                     //to store the number of dislikes
     Image thumbnail;                                 //this is a placeholder and will be replaced by the correct format/variable type
 
-    public Video()
+    public Video(String id, String path, String  desc)
     {
-
+        ID = id;
+        title = id;
+        videoPath = path;
+        description = desc;
     }
 }

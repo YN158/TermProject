@@ -19,11 +19,13 @@ public class VideoPanel extends JPanel
     JPanel panelSouth;
     JPanel panelCenter;
 
+    JButton mainPageButton;
     JTextField searchbar;
     JButton searchButton;
     JButton accountButton;
     JButton logOutButton;
     JButton uploadButton;
+
 
     JButton pause;
 
@@ -58,9 +60,20 @@ public class VideoPanel extends JPanel
         //---------------------------------- Other Components ----------------------------------
 
         mediaPlayerComponent = new EmbeddedMediaPlayerComponent();
-        mediaPlayerComponent.setPreferredSize(new Dimension(300, 300));
+        mediaPlayerComponent.setPreferredSize(new Dimension(900, 400));
 
         panelCenter.add(mediaPlayerComponent, BorderLayout.CENTER);
+
+
+
+        mainPageButton = new JButton("Main DashBoard");
+        panelNorth.add(mainPageButton);
+        mainPageButton.addActionListener(e ->
+        {
+            setVisible(false);
+            gui.mainDashboardPanel.setVisible(true);
+            mediaPlayerComponent.mediaPlayer().controls().setPause(true);
+        });
 
         searchbar = new JTextField();
         searchbar.setPreferredSize(new Dimension(250, 25));
@@ -93,7 +106,9 @@ public class VideoPanel extends JPanel
         panelNorth.add(uploadButton);
         uploadButton.addActionListener(e ->
         {
-
+            setVisible(false);
+            mediaPlayerComponent.mediaPlayer().controls().setPause(true);
+            gui.uploadVideoPanel.setVisible(true);
         });
 
         pause = new JButton("pause");
@@ -109,7 +124,7 @@ public class VideoPanel extends JPanel
 
     public void playVideo(String videoPath)
     {
-        mediaPlayerComponent.mediaPlayer().media().start(videoPath);
+        mediaPlayerComponent.mediaPlayer().media().startPaused(videoPath);
     }
 
     public void stopVideo()

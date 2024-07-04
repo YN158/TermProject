@@ -14,6 +14,7 @@ public class GUI                           //this class holds all the needed pan
     public NewAccountPanel newAccountPanel;
     public ChannelPanel channelPanel;
     public LogInPanel loginPanel;
+    public UploadVideoPanel uploadVideoPanel;
 
     public CCM centralClassManager;
 
@@ -29,6 +30,7 @@ public class GUI                           //this class holds all the needed pan
         newAccountPanel = new NewAccountPanel(this);
         channelPanel = new ChannelPanel(this);
         loginPanel = new LogInPanel(this);
+        uploadVideoPanel = new UploadVideoPanel(this);
 
         frame.add(startPanel);
         frame.add(videoPanel);
@@ -36,6 +38,7 @@ public class GUI                           //this class holds all the needed pan
         frame.add(newAccountPanel);
         frame.add(channelPanel);
         frame.add(loginPanel);
+        frame.add(uploadVideoPanel);
 
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

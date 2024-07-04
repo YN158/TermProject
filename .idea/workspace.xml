@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cc95419-82d4-4cc3-b2ee-9d1776b196aa" name="Changes" comment="The media player finally FUCKING WORKS!!!!!&#10;(I will hang someone)">
+    <list default="true" id="0cc95419-82d4-4cc3-b2ee-9d1776b196aa" name="Changes" comment="added some more things to the video panel">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/panels/UploadVideoPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CCM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/CCM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/panels/StartPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/panels/StartPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Video.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/panels/MainDashboardPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/panels/MainDashboardPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/panels/VideoPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/panels/VideoPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -237,7 +240,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720034246842</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="added some more things to the video panel">
+      <option name="closed" value="true" />
+      <created>1720079349613</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1720079349613</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -273,6 +284,7 @@
     <MESSAGE value="uhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh" />
     <MESSAGE value="well I think it worked? VLCJ lezz go???" />
     <MESSAGE value="The media player finally FUCKING WORKS!!!!!&#10;(I will hang someone)" />
-    <option name="LAST_COMMIT_MESSAGE" value="The media player finally FUCKING WORKS!!!!!&#10;(I will hang someone)" />
+    <MESSAGE value="added some more things to the video panel" />
+    <option name="LAST_COMMIT_MESSAGE" value="added some more things to the video panel" />
   </component>
 </project>
