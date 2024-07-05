@@ -18,7 +18,14 @@ dependencies {
     testImplementation("com.sun.media:jmf:2.1.1e")
     implementation("uk.co.caprica:vlcj:4.8.3")
     implementation("org.mongodb:mongodb-driver-sync:5.1.1")
+    implementation("org.springframework.boot:spring-boot-starter-data-mongodb")
+    implementation("org.springframework.boot:spring-boot-starter-data-mongodb-reactive")
+    implementation("org.springframework.ai:spring-ai-mongodb-atlas-store-spring-boot-starter")
+    testImplementation("org.springframework.boot:spring-boot-starter-test")
+    testImplementation("io.projectreactor:reactor-test")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 
+    //I genuinely have 0 idea which one of these is needed
 }
 
 tasks.test {

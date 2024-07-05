@@ -3,7 +3,7 @@ package org.example.NetWork;
 import java.io.*;
 import java.net.*;
 
-/*import com.mongodb.ConnectionString;
+import com.mongodb.ConnectionString;
 import com.mongodb.MongoClientSettings;
 import com.mongodb.MongoException;
 import com.mongodb.ServerApi;
@@ -11,7 +11,7 @@ import com.mongodb.ServerApiVersion;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoDatabase;
-import org.bson.Document;*/
+import org.bson.Document;
 
 public class Server implements Runnable {
     public static final int port = 9090;
@@ -20,7 +20,7 @@ public class Server implements Runnable {
     //mangodb username: bluemustardsauce
 
     public static void main(String[] args) {
-        /*String connectionString = "mongodb+srv://bluemustardsauce:691NfDk7mwCNeTJt@termproject.xdwhar0.mongodb.net/?appName=TermProject";
+        String connectionString = "mongodb+srv://bluemustardsauce:691NfDk7mwCNeTJt@termproject.xdwhar0.mongodb.net/?appName=TermProject";
         ServerApi serverApi = ServerApi.builder()
                 .version(ServerApiVersion.V1)
                 .build();
@@ -38,7 +38,7 @@ public class Server implements Runnable {
             } catch (MongoException e) {
                 e.printStackTrace();
             }
-        }*/
+        }
     }
 
     public void run() {
