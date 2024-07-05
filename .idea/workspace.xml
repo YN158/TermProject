@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cc95419-82d4-4cc3-b2ee-9d1776b196aa" name="Changes" comment="Implimented the MangoDB database">
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+    <list default="true" id="0cc95419-82d4-4cc3-b2ee-9d1776b196aa" name="Changes" comment="updated the User class">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Video.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +184,23 @@
       <option name="project" value="LOCAL" />
       <updated>1719473995105</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="updated the Build_gradle file">
+      <option name="closed" value="true" />
+      <created>1720193524627</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1720193524627</updated>
+    </task>
+    <task id="LOCAL-00016" summary="updated the User class">
+      <option name="closed" value="true" />
+      <created>1720193683651</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1720193683651</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -202,6 +219,8 @@
     <MESSAGE value="Implemented the Server and Client Class.&#10;(for the time being the Client can only send a message which the server prints, this is just a simple test and will be changed)" />
     <MESSAGE value="Tested the Client and Server in the Main file&#10;It wowked :3" />
     <MESSAGE value="Implimented the MangoDB database" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implimented the MangoDB database" />
+    <MESSAGE value="updated the Build_gradle file" />
+    <MESSAGE value="updated the User class" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated the User class" />
   </component>
 </project>
