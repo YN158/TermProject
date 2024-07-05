@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cc95419-82d4-4cc3-b2ee-9d1776b196aa" name="Changes" comment="created the MongoDb class">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/NetWork/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/NetWork/Server.java" afterDir="false" />
+    <list default="true" id="0cc95419-82d4-4cc3-b2ee-9d1776b196aa" name="Changes" comment="Updated the Client class">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/NetWork/MongoDb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/NetWork/MongoDb.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,7 +217,23 @@
       <option name="project" value="LOCAL" />
       <updated>1720193904495</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Updated the Comment class">
+      <option name="closed" value="true" />
+      <created>1720194100990</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1720194100990</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Updated the Client class">
+      <option name="closed" value="true" />
+      <created>1720194180397</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1720194180397</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -238,6 +256,8 @@
     <MESSAGE value="updated the User class" />
     <MESSAGE value="updated the Video class" />
     <MESSAGE value="created the MongoDb class" />
-    <option name="LAST_COMMIT_MESSAGE" value="created the MongoDb class" />
+    <MESSAGE value="Updated the Comment class" />
+    <MESSAGE value="Updated the Client class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated the Client class" />
   </component>
 </project>
