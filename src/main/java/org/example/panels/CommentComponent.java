@@ -14,7 +14,10 @@ public class CommentComponent extends JPanel
     {
         setLayout(new BorderLayout());
 
-
+        viewAuthorChannel = new JButton();
+        add(viewAuthorChannel, BorderLayout.NORTH);
+        commentBody = new JLabel();
+        add(commentBody, BorderLayout.CENTER);
     }
 
 }

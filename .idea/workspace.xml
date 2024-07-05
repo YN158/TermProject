@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cc95419-82d4-4cc3-b2ee-9d1776b196aa" name="Changes" comment="developed the Channel Panel thingy.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/panels/CommentComponent.java" afterDir="false" />
+    <list default="true" id="0cc95419-82d4-4cc3-b2ee-9d1776b196aa" name="Changes" comment="Created the CommentComponent for... comments... duh">
+      <change afterPath="$PROJECT_DIR$/Videos/1.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Videos/2.mp4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/panels/CommentComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/panels/CommentComponent.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -267,7 +269,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720165444786</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Created the CommentComponent for... comments... duh">
+      <option name="closed" value="true" />
+      <created>1720166395412</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1720166395412</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -307,6 +317,7 @@
     <MESSAGE value="Created the whole &quot;upload video&quot; part" />
     <MESSAGE value="I literally forgor what part I did" />
     <MESSAGE value="developed the Channel Panel thingy." />
-    <option name="LAST_COMMIT_MESSAGE" value="developed the Channel Panel thingy." />
+    <MESSAGE value="Created the CommentComponent for... comments... duh" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created the CommentComponent for... comments... duh" />
   </component>
 </project>
