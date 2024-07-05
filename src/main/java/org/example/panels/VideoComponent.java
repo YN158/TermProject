@@ -11,15 +11,16 @@ public class VideoComponent extends JPanel
     JButton viewUploaderChannel;
     JLabel thumbnail;
 
-    public VideoComponent(String vidtit, String vidUploader/*, Image img*/, GUI gui, String path)
+    public VideoComponent(String vidtit, String vidUploader, GUI gui)
     {
         setLayout(new BorderLayout());
 
         viewVideo = new JButton(vidtit);
         viewVideo.addActionListener(e ->
         {
-            gui.videoPanel.playVideo(path);
+            gui.videoPanel.playVideo("D:\\University\\Advanced Programming\\Assignments\\TermProject\\TermProject\\Videos\\" + vidtit + ".mp4");
             gui.videoPanel.setVisible(true);
+            gui.videoPanel.refresh();
             gui.mainDashboardPanel.setVisible(false);
         });
         viewUploaderChannel = new JButton(vidUploader);

@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cc95419-82d4-4cc3-b2ee-9d1776b196aa" name="Changes" comment="Created the whole &quot;upload video&quot; part">
+    <list default="true" id="0cc95419-82d4-4cc3-b2ee-9d1776b196aa" name="Changes" comment="I literally forgor what part I did">
+      <change afterPath="$PROJECT_DIR$/Videos/a.mp4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Videos/1805508841901375553_1.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Video.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/panels/ChannelPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/panels/ChannelPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/panels/MainDashboardPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/panels/MainDashboardPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/panels/UploadVideoPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/panels/UploadVideoPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/panels/VideoComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/panels/VideoComponent.java" afterDir="false" />
@@ -257,7 +258,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720093460393</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="I literally forgor what part I did">
+      <option name="closed" value="true" />
+      <created>1720161600745</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1720161600745</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -295,6 +304,7 @@
     <MESSAGE value="The media player finally FUCKING WORKS!!!!!&#10;(I will hang someone)" />
     <MESSAGE value="added some more things to the video panel" />
     <MESSAGE value="Created the whole &quot;upload video&quot; part" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created the whole &quot;upload video&quot; part" />
+    <MESSAGE value="I literally forgor what part I did" />
+    <option name="LAST_COMMIT_MESSAGE" value="I literally forgor what part I did" />
   </component>
 </project>

@@ -6,7 +6,7 @@ import org.example.Video;
 
 import javax.swing.*;
 import java.awt.event.WindowEvent;
-
+import javax.swing.filechooser.*;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -22,6 +22,7 @@ public class UploadVideoPanel extends JPanel
     JTextField videoPath;
     JTextField videoTitle;
     JTextField videoDescription;
+    JFileChooser j = new JFileChooser();
 
     JButton upload;
     JButton exit;
@@ -59,16 +60,17 @@ public class UploadVideoPanel extends JPanel
         {
             if (!videoPath.getText().equals("") && !videoTitle.getText().equals("") &&  !videoDescription.getText().equals(""))
             {
-                gui.centralClassManager.activeVideo = new Video(videoTitle.getText(), videoPath.getText(), videoDescription.getText());
+                gui.centralClassManager.activeVideo = new Video(videoTitle.getText(), videoPath.getText(), videoDescription.getText(), gui.centralClassManager.activeUser.GetID());
                 gui.centralClassManager.activeUser.addVideo(videoTitle.getText());
 
                 copyFile(videoPath.getText(), "D:\\University\\Advanced Programming\\Assignments\\TermProject\\TermProject\\Videos", videoTitle.getText());
-                gui.mainDashboardPanel.newVideos.add(new VideoComponent(gui.centralClassManager.activeVideo.GetID(), gui.centralClassManager.activeVideo.Getuploader(), gui, "D:\\University\\Advanced Programming\\Assignments\\TermProject\\TermProject\\Videos\\" + videoTitle.getText() + ".mp4"));
+                gui.mainDashboardPanel.newVideos.add(new VideoComponent(gui.centralClassManager.activeVideo.GetID(), gui.centralClassManager.activeVideo.Getuploader(), gui));
 
                 gui.videoPanel.playVideo("D:\\University\\Advanced Programming\\Assignments\\TermProject\\TermProject\\Videos\\" + videoTitle.getText() + ".mp4");
 
                 setVisible(false);
                 gui.videoPanel.setVisible(true);
+                gui.videoPanel.refresh();
                 gui.mainDashboardPanel.refresh();
                 gui.mainDashboardPanel.setVisible(true);
             }

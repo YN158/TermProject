@@ -17,12 +17,13 @@ public class Video
     int dislike;                                     //to store the number of dislikes
     Image thumbnail;                                 //this is a placeholder and will be replaced by the correct format/variable type
 
-    public Video(String id, String path, String  desc)
+    public Video(String id, String path, String  desc, String uploaderid)
     {
         ID = id;
         title = id;
         videoPath = path;
         description = desc;
+        channelID = uploaderid;
     }
 
     public String GetID()

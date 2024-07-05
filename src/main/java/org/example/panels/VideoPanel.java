@@ -12,6 +12,7 @@ import uk.co.caprica.vlcj.player.embedded.EmbeddedMediaPlayer;
 
 public class VideoPanel extends JPanel
 {
+    GUI gui;
     private final EmbeddedMediaPlayerComponent mediaPlayerComponent;
     JPanel panelNorth;
     JPanel panelWest;
@@ -30,8 +31,9 @@ public class VideoPanel extends JPanel
     JButton pause;
 
 
-    public VideoPanel(GUI gui)
+    public VideoPanel(GUI g)
     {
+        gui = g;
         setLayout(new BorderLayout());
 
         //---------------------------------- Main Border Panel ----------------------------------
@@ -91,7 +93,9 @@ public class VideoPanel extends JPanel
         panelNorth.add(accountButton);
         accountButton.addActionListener(e ->
         {
-
+            gui.channelPanel.setVisible(true);
+            gui.channelPanel.refresh();
+            setVisible(false);
         });
 
         logOutButton = new JButton("LogOut");
@@ -135,6 +139,6 @@ public class VideoPanel extends JPanel
 
     public void refresh()
     {
-
+        accountButton.setText(gui.centralClassManager.activeUser.GetID());
     }
 }

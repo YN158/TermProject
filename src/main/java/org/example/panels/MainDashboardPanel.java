@@ -52,7 +52,7 @@ public class MainDashboardPanel extends JPanel
         add(scrollFrame, BorderLayout.CENTER);
 
         panelNorth.setLayout(new FlowLayout());
-        panelCenter.setLayout(new GridLayout(5,1));
+        panelCenter.setLayout(new GridLayout(5,3));
 
         //---------------------------------- Other Components ----------------------------------
 
@@ -71,7 +71,9 @@ public class MainDashboardPanel extends JPanel
         panelNorth.add(accountButton);
         accountButton.addActionListener(e ->
         {
-
+            gui.channelPanel.setVisible(true);
+            gui.channelPanel.refresh();
+            setVisible(false);
         });
 
         logOutButton = new JButton("LogOut");
