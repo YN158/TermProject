@@ -91,6 +91,7 @@ public class MainDashboardPanel extends JPanel
             gui.uploadVideoPanel.setVisible(true);
         });
 
+        newVideos = new ArrayList<VideoComponent>();
 
         setVisible(false);
         setSize(1550, 838);
@@ -100,5 +101,9 @@ public class MainDashboardPanel extends JPanel
     public void refresh()
     {
         accountButton.setText(gui.centralClassManager.activeUser.GetID());
+        for (int i = 0; i < newVideos.size(); i++)
+        {
+            panelCenter.add(newVideos.get(i));
+        }
     }
 }

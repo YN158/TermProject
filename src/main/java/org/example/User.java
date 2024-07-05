@@ -43,8 +43,5 @@ public class User
         subscriberIDs = null;
         subscriptionIDs = null;
         icon = null;
-        videoIDs = new ArrayList<String>();
-        subscriptionIDs = new ArrayList<String>();
-        subscriberIDs = new ArrayList<String>();
     }
 }

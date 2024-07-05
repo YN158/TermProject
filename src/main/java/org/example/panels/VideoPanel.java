@@ -72,6 +72,7 @@ public class VideoPanel extends JPanel
         {
             setVisible(false);
             gui.mainDashboardPanel.setVisible(true);
+            gui.mainDashboardPanel.refresh();
             mediaPlayerComponent.mediaPlayer().controls().setPause(true);
         });
 

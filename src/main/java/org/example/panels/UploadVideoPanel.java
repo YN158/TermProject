@@ -60,9 +60,10 @@ public class UploadVideoPanel extends JPanel
             if (!videoPath.getText().equals("") && !videoTitle.getText().equals("") &&  !videoDescription.getText().equals(""))
             {
                 gui.centralClassManager.activeVideo = new Video(videoTitle.getText(), videoPath.getText(), videoDescription.getText());
-                //gui.centralClassManager.activeUser.addVideo(videoTitle.getText());
+                gui.centralClassManager.activeUser.addVideo(videoTitle.getText());
 
                 copyFile(videoPath.getText(), "D:\\University\\Advanced Programming\\Assignments\\TermProject\\TermProject\\Videos", videoTitle.getText());
+                gui.mainDashboardPanel.newVideos.add(new VideoComponent(gui.centralClassManager.activeVideo.GetID(), gui.centralClassManager.activeVideo.Getuploader(), gui, "D:\\University\\Advanced Programming\\Assignments\\TermProject\\TermProject\\Videos\\" + videoTitle.getText() + ".mp4"));
 
                 gui.videoPanel.playVideo("D:\\University\\Advanced Programming\\Assignments\\TermProject\\TermProject\\Videos\\" + videoTitle.getText() + ".mp4");
 

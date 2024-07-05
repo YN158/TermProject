@@ -24,4 +24,19 @@ public class Video
         videoPath = path;
         description = desc;
     }
+
+    public String GetID()
+    {
+        return ID;
+    }
+
+    public String Getuploader()
+    {
+        return channelID;
+    }
+    public Image GetThumbnail()
+    {
+        return thumbnail;
+    }
+
 }
