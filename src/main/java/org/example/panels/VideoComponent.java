@@ -1,6 +1,7 @@
 package org.example.panels;
 
 import org.example.GUI;
+import org.example.Video;
 
 import javax.swing.*;
 import java.awt.*;
@@ -12,13 +13,13 @@ public class VideoComponent extends JPanel
     JLabel thumbnail;
     String videoID;
 
-    public VideoComponent(String vidtit, String vidUploader, GUI gui, String ID)
+    public VideoComponent(Video vid, GUI gui)
     {
-        videoID = ID;
+        videoID = vid.GetID();
 
         setLayout(new BorderLayout());
 
-        viewVideo = new JButton(vidtit);
+        viewVideo = new JButton(vid.GetTitle());
         viewVideo.addActionListener(e ->
         {
             gui.videoPanel.playVideo("D:\\University\\Advanced Programming\\Assignments\\TermProject\\TermProject\\Videos\\" + videoID + ".mp4");
@@ -26,7 +27,7 @@ public class VideoComponent extends JPanel
             gui.videoPanel.setVisible(true);
             gui.videoPanel.refresh();
         });
-        viewUploaderChannel = new JButton(vidUploader);
+        viewUploaderChannel = new JButton(vid.Getuploader());
         viewUploaderChannel.addActionListener(e ->
         {
             gui.mainDashboardPanel.setVisible(false);

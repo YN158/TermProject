@@ -1,5 +1,6 @@
 package org.example.panels;
 
+import org.example.CCM;
 import org.example.GUI;
 
 import javax.swing.*;
@@ -82,7 +83,7 @@ public class MainDashboardPanel extends JPanel
         {
             setVisible(false);
             gui.startPanel.setVisible(true);
-            gui.centralClassManager.activeUser.SetToDefault();
+            CCM.activeUser.SetToDefault();
         });
 
         uploadButton = new JButton("Upload Video");
@@ -102,7 +103,7 @@ public class MainDashboardPanel extends JPanel
 
     public void refresh()
     {
-        accountButton.setText(gui.centralClassManager.activeUser.GetID());
+        accountButton.setText(CCM.activeUser.GetID());
         for (int i = 0; i < newVideos.size(); i++)
         {
             panelCenter.add(newVideos.get(i));

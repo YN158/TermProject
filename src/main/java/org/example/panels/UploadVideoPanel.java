@@ -1,5 +1,6 @@
 package org.example.panels;
 
+import org.example.CCM;
 import org.example.GUI;
 import org.example.User;
 import org.example.Video;
@@ -26,6 +27,7 @@ public class UploadVideoPanel extends JPanel
 
     JButton upload;
     JButton exit;
+
     public UploadVideoPanel(GUI gui)
     {
         setLayout(null);
@@ -60,19 +62,17 @@ public class UploadVideoPanel extends JPanel
         {
             if (!videoPath.getText().equals("") && !videoTitle.getText().equals("") &&  !videoDescription.getText().equals(""))
             {
-                gui.centralClassManager.activeVideo = new Video(IDgenerator.VideoGetUniqueId() ,videoTitle.getText(), videoPath.getText(), videoDescription.getText(), gui.centralClassManager.activeUser.GetID());
-                gui.centralClassManager.activeUser.addVideo(videoTitle.getText());
+                CCM.activeVideo = new Video(IDgenerator.VideoGetUniqueId() ,videoTitle.getText(), videoPath.getText(), videoDescription.getText(), CCM.activeUser.GetID());
+                CCM.activeUser.addVideo(CCM.activeVideo.GetID());
 
-                copyFile(videoPath.getText(), "D:\\University\\Advanced Programming\\Assignments\\TermProject\\TermProject\\Videos", gui.centralClassManager.activeVideo.GetID());
-                gui.mainDashboardPanel.newVideos.add(new VideoComponent(gui.centralClassManager.activeVideo.GetTitle(), gui.centralClassManager.activeVideo.Getuploader(), gui, gui.centralClassManager.activeVideo.GetID()));
+                copyFile(videoPath.getText(), "D:\\University\\Advanced Programming\\Assignments\\TermProject\\TermProject\\Videos", CCM.activeVideo.GetID());
 
-                gui.videoPanel.playVideo("D:\\University\\Advanced Programming\\Assignments\\TermProject\\TermProject\\Videos\\" + gui.centralClassManager.activeVideo.GetID() + ".mp4");
+                gui.videoPanel.playVideo("D:\\University\\Advanced Programming\\Assignments\\TermProject\\TermProject\\Videos\\" + CCM.activeVideo.GetID() + ".mp4");
 
                 setVisible(false);
                 gui.videoPanel.setVisible(true);
                 gui.videoPanel.refresh();
                 gui.mainDashboardPanel.refresh();
-                gui.mainDashboardPanel.setVisible(true);
             }
         });
         add(upload);

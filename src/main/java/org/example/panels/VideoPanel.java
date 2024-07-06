@@ -1,5 +1,6 @@
 package org.example.panels;
 
+import org.example.CCM;
 import org.example.GUI;
 
 import javax.swing.*;
@@ -109,7 +110,7 @@ public class VideoPanel extends JPanel
         {
             setVisible(false);
             gui.startPanel.setVisible(true);
-            gui.centralClassManager.activeUser.SetToDefault();
+            CCM.activeUser.SetToDefault();
         });
 
         uploadButton = new JButton("Upload Video");
@@ -137,21 +138,21 @@ public class VideoPanel extends JPanel
         {
             if (!liked)
             {
-                gui.centralClassManager.activeVideo.AddLike();
+                CCM.activeVideo.AddLike();
                 liked = true;
-                like.setText("Likes = " + gui.centralClassManager.activeVideo.GetLikes());
+                like.setText("Likes = " + CCM.activeVideo.GetLikes());
                 if (disliked)
                 {
                     disliked = false;
-                    gui.centralClassManager.activeVideo.RemoveDislike();
-                    dislike.setText("Dislikes = " + gui.centralClassManager.activeVideo.GetDislikes());
+                    CCM.activeVideo.RemoveDislike();
+                    dislike.setText("Dislikes = " + CCM.activeVideo.GetDislikes());
                 }
             }
             else
             {
-                gui.centralClassManager.activeVideo.RemoveLike();
+                CCM.activeVideo.RemoveLike();
                 liked = false;
-                like.setText("Likes = " + gui.centralClassManager.activeVideo.GetLikes());
+                like.setText("Likes = " + CCM.activeVideo.GetLikes());
             }
 
         });
@@ -162,21 +163,21 @@ public class VideoPanel extends JPanel
         {
             if (!disliked)
             {
-                gui.centralClassManager.activeVideo.AddDislike();
+                CCM.activeVideo.AddDislike();
                 disliked = true;
-                dislike.setText("Dislikes = " + gui.centralClassManager.activeVideo.GetDislikes());
+                dislike.setText("Dislikes = " + CCM.activeVideo.GetDislikes());
                 if (liked)
                 {
                     liked = false;
-                    gui.centralClassManager.activeVideo.RemoveLike();
-                    like.setText("Likes = " + gui.centralClassManager.activeVideo.GetLikes());
+                    CCM.activeVideo.RemoveLike();
+                    like.setText("Likes = " + CCM.activeVideo.GetLikes());
                 }
             }
             else
             {
-                gui.centralClassManager.activeVideo.RemoveDislike();
+                CCM.activeVideo.RemoveDislike();
                 disliked = false;
-                dislike.setText("Dislikes = " + gui.centralClassManager.activeVideo.GetDislikes());
+                dislike.setText("Dislikes = " + CCM.activeVideo.GetDislikes());
             }
         });
 
@@ -200,8 +201,8 @@ public class VideoPanel extends JPanel
 
     public void refresh()
     {
-        accountButton.setText(gui.centralClassManager.activeUser.GetID());
-        dislike.setText("Dislikes = " + gui.centralClassManager.activeVideo.GetDislikes());
-        like.setText("Likes = " + gui.centralClassManager.activeVideo.GetLikes());
+        accountButton.setText(CCM.activeUser.GetID());
+        dislike.setText("Dislikes = " + CCM.activeVideo.GetDislikes());
+        like.setText("Likes = " + CCM.activeVideo.GetLikes());
     }
 }

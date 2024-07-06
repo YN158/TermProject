@@ -1,5 +1,6 @@
 package org.example.panels;
 
+import org.example.CCM;
 import org.example.GUI;
 import uk.co.caprica.vlcj.player.component.EmbeddedMediaPlayerComponent;
 
@@ -91,7 +92,7 @@ public class ChannelPanel  extends JPanel
         {
             setVisible(false);
             gui.startPanel.setVisible(true);
-            gui.centralClassManager.activeUser.SetToDefault();
+            CCM.activeUser.SetToDefault();
         });
 
         uploadButton = new JButton("Upload Video");
@@ -111,7 +112,7 @@ public class ChannelPanel  extends JPanel
 
     public void refresh()
     {
-        accountButton.setText(gui.centralClassManager.activeUser.GetID());
-        channelName.setText(gui.centralClassManager.activeUser.GetID());
+        accountButton.setText(CCM.activeUser.GetID());
+        channelName.setText(CCM.activeUser.GetID());
     }
 }

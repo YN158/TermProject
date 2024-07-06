@@ -1,10 +1,11 @@
 package org.example.panels;
+import org.example.CCM;
+
 import java.time.Instant;
 import java.util.concurrent.atomic.AtomicLong;
 
 public class IDgenerator
 {
-
     private static final AtomicLong VCOUNTER = new AtomicLong(0);
     private static final long VOFFSET = Instant.now().getEpochSecond();
 

@@ -34,6 +34,11 @@ public class User
         videoIDs.add(vidID);
     }
 
+    public void print()
+    {
+        System.out.println(videoIDs);
+    }
+
     public void SetToDefault()
     {
         ID = "";

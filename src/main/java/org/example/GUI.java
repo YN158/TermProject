@@ -16,12 +16,9 @@ public class GUI                           //this class holds all the needed pan
     public LogInPanel loginPanel;
     public UploadVideoPanel uploadVideoPanel;
 
-    public CCM centralClassManager;
 
-    public GUI(String name, CCM ccm)
+    public GUI(String name)
     {
-        centralClassManager = ccm;
-
         frame = new JFrame(name);
 
         startPanel = new StartPanel(this);

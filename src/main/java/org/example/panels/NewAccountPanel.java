@@ -1,5 +1,6 @@
 package org.example.panels;
 
+import org.example.CCM;
 import org.example.GUI;
 import org.example.User;
 
@@ -64,7 +65,7 @@ public class NewAccountPanel  extends JPanel
             {
                 if (isValidEmail(emailtext.getText()))
                 {
-                    gui.centralClassManager.activeUser = new User(nametext.getText(), emailtext.getText(), passwordtext.getText());
+                    CCM.activeUser = new User(nametext.getText(), emailtext.getText(), passwordtext.getText());
                     setVisible(false);
                     gui.mainDashboardPanel.refresh();
                     gui.mainDashboardPanel.setVisible(true);
