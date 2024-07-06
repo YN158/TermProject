@@ -62,10 +62,17 @@ public class NewAccountPanel  extends JPanel
         {
             if (!nametext.getText().equals("") && !passwordtext.getText().equals("") && !emailtext.getText().equals(""))
             {
-                gui.centralClassManager.activeUser = new User(nametext.getText(), emailtext.getText(), passwordtext.getText());
-                setVisible(false);
-                gui.mainDashboardPanel.refresh();
-                gui.mainDashboardPanel.setVisible(true);
+                if (isValidEmail(emailtext.getText()))
+                {
+                    gui.centralClassManager.activeUser = new User(nametext.getText(), emailtext.getText(), passwordtext.getText());
+                    setVisible(false);
+                    gui.mainDashboardPanel.refresh();
+                    gui.mainDashboardPanel.setVisible(true);
+                }
+                else
+                {
+                    statues.setText("Please enter a valid Email");
+                }
             }
             else
             {
@@ -87,5 +94,12 @@ public class NewAccountPanel  extends JPanel
     public void refresh()
     {
 
+    }
+
+    public static boolean isValidEmail(String email)
+    {
+        String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$";
+
+        return email.matches(emailRegex);
     }
 }
