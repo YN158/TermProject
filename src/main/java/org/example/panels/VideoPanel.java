@@ -29,6 +29,11 @@ public class VideoPanel extends JPanel
 
 
     JButton pause;
+    JButton like;
+    boolean liked = false;
+    JButton dislike;
+    boolean disliked = false;
+    JButton mute;
 
 
     public VideoPanel(GUI g)
@@ -116,11 +121,70 @@ public class VideoPanel extends JPanel
             gui.uploadVideoPanel.setVisible(true);
         });
 
-        pause = new JButton("pause");
+        //---------------------------------- Video Control Components ----------------------------------
+
+        pause = new JButton("pause/play");
         panelSouth.add(pause);
         pause.addActionListener(e ->
         {
-            stopVideo();
+            mediaPlayerComponent.mediaPlayer().controls().pause();
+        });
+
+
+        like = new JButton();
+        panelSouth.add(like);
+        like.addActionListener(e ->
+        {
+            if (!liked)
+            {
+                gui.centralClassManager.activeVideo.AddLike();
+                liked = true;
+                like.setText("Likes = " + gui.centralClassManager.activeVideo.GetLikes());
+                if (disliked)
+                {
+                    disliked = false;
+                    gui.centralClassManager.activeVideo.RemoveDislike();
+                    dislike.setText("Dislikes = " + gui.centralClassManager.activeVideo.GetDislikes());
+                }
+            }
+            else
+            {
+                gui.centralClassManager.activeVideo.RemoveLike();
+                liked = false;
+                like.setText("Likes = " + gui.centralClassManager.activeVideo.GetLikes());
+            }
+
+        });
+
+        dislike = new JButton();
+        panelSouth.add(dislike);
+        dislike.addActionListener(e ->
+        {
+            if (!disliked)
+            {
+                gui.centralClassManager.activeVideo.AddDislike();
+                disliked = true;
+                dislike.setText("Dislikes = " + gui.centralClassManager.activeVideo.GetDislikes());
+                if (liked)
+                {
+                    liked = false;
+                    gui.centralClassManager.activeVideo.RemoveLike();
+                    like.setText("Likes = " + gui.centralClassManager.activeVideo.GetLikes());
+                }
+            }
+            else
+            {
+                gui.centralClassManager.activeVideo.RemoveDislike();
+                disliked = false;
+                dislike.setText("Dislikes = " + gui.centralClassManager.activeVideo.GetDislikes());
+            }
+        });
+
+        mute = new JButton("mute");
+        panelSouth.add(mute);
+        mute.addActionListener(e ->
+        {
+            mediaPlayerComponent.mediaPlayer().audio().mute();
         });
 
         setVisible(false);
@@ -130,15 +194,14 @@ public class VideoPanel extends JPanel
     public void playVideo(String videoPath)
     {
         mediaPlayerComponent.mediaPlayer().media().startPaused(videoPath);
+        mediaPlayerComponent.mediaPlayer().controls().setRepeat(true);
     }
 
-    public void stopVideo()
-    {
-        mediaPlayerComponent.mediaPlayer().controls().pause();
-    }
 
     public void refresh()
     {
         accountButton.setText(gui.centralClassManager.activeUser.GetID());
+        dislike.setText("Dislikes = " + gui.centralClassManager.activeVideo.GetDislikes());
+        like.setText("Likes = " + gui.centralClassManager.activeVideo.GetLikes());
     }
 }

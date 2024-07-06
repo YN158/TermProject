@@ -31,6 +31,16 @@ public class Video
         return ID;
     }
 
+    public int GetLikes()
+    {
+        return likes;
+    }
+
+    public int GetDislikes()
+    {
+        return dislike;
+    }
+
     public String Getuploader()
     {
         return channelID;
@@ -38,6 +48,26 @@ public class Video
     public Image GetThumbnail()
     {
         return thumbnail;
+    }
+
+    public void AddLike()
+    {
+        likes++;
+    }
+
+    public void RemoveLike()
+    {
+        likes--;
+    }
+
+    public void AddDislike()
+    {
+        dislike++;
+    }
+
+    public void RemoveDislike()
+    {
+        dislike--;
     }
 
 }
