@@ -1,5 +1,7 @@
 package org.example;
 
+import org.example.panels.IDgenerator;
+
 import java.util.ArrayList;
 
 public class CCM                                     //CCM of Central Class Manager is a class designed to hold the data and information required during the runtime
