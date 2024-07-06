@@ -23,7 +23,7 @@ public class ChannelPanel  extends JPanel
     JButton uploadButton;
 
 
-    JButton pause;
+    JLabel channelName;
 
 
     public ChannelPanel(GUI g)
@@ -102,6 +102,9 @@ public class ChannelPanel  extends JPanel
             gui.uploadVideoPanel.setVisible(true);
         });
 
+        channelName = new JLabel();
+        panelWest.add(channelName);
+
         setVisible(false);
         setSize(1550, 838);
     }
@@ -109,5 +112,6 @@ public class ChannelPanel  extends JPanel
     public void refresh()
     {
         accountButton.setText(gui.centralClassManager.activeUser.GetID());
+        channelName.setText(gui.centralClassManager.activeUser.GetID());
     }
 }

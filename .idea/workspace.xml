@@ -4,18 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cc95419-82d4-4cc3-b2ee-9d1776b196aa" name="Changes" comment="Created the CommentComponent for... comments... duh">
-      <change afterPath="$PROJECT_DIR$/Videos/555.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Videos/aaaaa.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Videos/aaaaaaaaaaaaaaa.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Videos/rrrrrrrrrrr.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_6_17_2024_12_04_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_6_17_2024_12_04_PM__Changes_.xml" afterDir="false" />
+    <list default="true" id="0cc95419-82d4-4cc3-b2ee-9d1776b196aa" name="Changes" comment="added some functions to the video player">
+      <change afterPath="$PROJECT_DIR$/Videos/q.mp4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Videos/1.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Videos/2.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Videos/a.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/Videos/a.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Video.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/panels/VideoPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/panels/VideoPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/panels/ChannelPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/panels/ChannelPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/panels/VideoComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/panels/VideoComponent.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -284,7 +277,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720166395412</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="added some functions to the video player">
+      <option name="closed" value="true" />
+      <created>1720249903204</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1720249903204</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -300,7 +301,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="initial coomit" />
     <MESSAGE value="initial coomit 2! (I fucking love how intelij just makes up random files, like where TF did this one come from)" />
     <MESSAGE value="Created the main classes" />
     <MESSAGE value="the main classes defined" />
@@ -325,6 +325,7 @@
     <MESSAGE value="I literally forgor what part I did" />
     <MESSAGE value="developed the Channel Panel thingy." />
     <MESSAGE value="Created the CommentComponent for... comments... duh" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created the CommentComponent for... comments... duh" />
+    <MESSAGE value="added some functions to the video player" />
+    <option name="LAST_COMMIT_MESSAGE" value="added some functions to the video player" />
   </component>
 </project>
