@@ -70,6 +70,8 @@ public class UploadVideoPanel extends JPanel
 
                 gui.videoPanel.playVideo("D:\\University\\Advanced Programming\\Assignments\\TermProject\\TermProject\\Videos\\" + CCM.activeVideo.GetID() + ".mp4");
 
+                gui.mainDashboardPanel.newVideos.add(new VideoComponent(CCM.activeVideo, gui));
+
                 setVisible(false);
                 gui.videoPanel.setVisible(true);
                 gui.videoPanel.refresh();

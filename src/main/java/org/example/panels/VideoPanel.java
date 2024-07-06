@@ -29,6 +29,7 @@ public class VideoPanel extends JPanel
     JButton uploadButton;
 
 
+    JButton subscribe;
     JButton pause;
     JButton like;
     boolean liked = false;
@@ -124,13 +125,26 @@ public class VideoPanel extends JPanel
 
         //---------------------------------- Video Control Components ----------------------------------
 
+        subscribe = new JButton();
+        panelSouth.add(subscribe);
+
+        subscribe.addActionListener(e ->
+        {
+            boolean issubscribed = false;
+            if (!issubscribed)
+            {
+                CCM.activeUser.addSubscription(CCM.activeVideo.Getuploader());
+                issubscribed = false;
+            }
+
+        });
+
         pause = new JButton("pause/play");
         panelSouth.add(pause);
         pause.addActionListener(e ->
         {
             mediaPlayerComponent.mediaPlayer().controls().pause();
         });
-
 
         like = new JButton();
         panelSouth.add(like);
@@ -201,6 +215,7 @@ public class VideoPanel extends JPanel
 
     public void refresh()
     {
+        subscribe.setText(CCM.activeVideo.Getuploader());
         accountButton.setText(CCM.activeUser.GetID());
         dislike.setText("Dislikes = " + CCM.activeVideo.GetDislikes());
         like.setText("Likes = " + CCM.activeVideo.GetLikes());

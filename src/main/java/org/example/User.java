@@ -58,6 +58,11 @@ public class User implements Cloneable
         videoIDs.add(vidID);
     }
 
+    public void addSubscription(String subscribedChannelID)
+    {
+        subscriptionIDs.add(subscribedChannelID);
+    }
+
     public void SetToDefault()
     {
         ID = "";

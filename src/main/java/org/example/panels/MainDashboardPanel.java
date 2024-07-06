@@ -23,7 +23,7 @@ public class MainDashboardPanel extends JPanel
     JButton uploadButton;
     ArrayList <VideoComponent> newVideos;
 
-
+    JLabel subscriptions;
 
     public MainDashboardPanel(GUI g)
     {
@@ -54,6 +54,7 @@ public class MainDashboardPanel extends JPanel
 
         panelNorth.setLayout(new FlowLayout());
         panelCenter.setLayout(new GridLayout(5,3));
+        panelWest.setLayout(new BoxLayout(panelWest, BoxLayout.Y_AXIS));
 
         //---------------------------------- Other Components ----------------------------------
 
@@ -96,6 +97,9 @@ public class MainDashboardPanel extends JPanel
 
         newVideos = new ArrayList<VideoComponent>();
 
+        subscriptions = new JLabel();
+        panelWest.add(subscriptions);
+
         setVisible(false);
         setSize(1550, 838);
 
@@ -104,9 +108,16 @@ public class MainDashboardPanel extends JPanel
     public void refresh()
     {
         accountButton.setText(CCM.activeUser.GetID());
+
         for (int i = 0; i < newVideos.size(); i++)
         {
             panelCenter.add(newVideos.get(i));
+        }
+
+        subscriptions.setText("");
+        for (int i = 0; i < CCM.activeUser.GetSubsIDs().size(); i++)
+        {
+            subscriptions.setText(CCM.activeUser.GetSubsIDs().get(i) + "\n");
         }
     }
 }
