@@ -1,10 +1,12 @@
 package org.example.panels;
 
+import org.example.CCM;
 import org.example.GUI;
 import org.example.User;
 
 import javax.swing.*;
 import java.awt.event.WindowEvent;
+import java.util.ArrayList;
 
 public class LogInPanel extends JPanel
 {
@@ -53,7 +55,28 @@ public class LogInPanel extends JPanel
         {
             if (!nametext.getText().equals("") && !passwordtext.getText().equals(""))
             {
+            System.out.println(CCM.users.getFirst().GetID() + " - " + nametext.getText());
+                User foundUser = findUserById(CCM.users, nametext.getText());
 
+                if (foundUser != null)
+                {
+                    if (foundUser.GetPassword().equals(passwordtext.getText()))
+                    {
+                        CCM.activeUser = foundUser.clone();
+                        System.out.println(foundUser.GetID());
+                        setVisible(false);
+                        gui.mainDashboardPanel.refresh();
+                        gui.mainDashboardPanel.setVisible(true);
+                    }
+                    else
+                    {
+                        statues.setText("incorrect password");
+                    }
+                }
+                else
+                {
+                    statues.setText("User not found");
+                }
             }
             else
             {
@@ -75,5 +98,15 @@ public class LogInPanel extends JPanel
     public void refresh()
     {
 
+    }
+
+    public static User findUserById(ArrayList<User> users, String targetId)
+    {
+        for (User user : users) {
+            if (user.GetID().equals(targetId)) {
+                return user;
+            }
+        }
+        return null;
     }
 }

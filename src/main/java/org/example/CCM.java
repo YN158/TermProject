@@ -13,12 +13,8 @@ public class CCM                                     //CCM of Central Class Mana
     public static ArrayList<String> userID;                        //used to store the IDs of multiple users if ever needed
     public static ArrayList<String> commentID;                     //used to store the IDs of multiple comments if ever needed
 
-    public static ArrayList<Video> videos;
-    public static ArrayList<User> users;
-    public static ArrayList<Comment> comments;
+    public static ArrayList<Video> videos = new ArrayList<Video>();
+    public static ArrayList<User> users = new ArrayList<User>();
+    public static ArrayList<Comment> comments = new ArrayList<Comment>();
 
-    public CCM()
-    {
-
-    }
 }

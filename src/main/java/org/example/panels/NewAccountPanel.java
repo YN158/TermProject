@@ -6,6 +6,7 @@ import org.example.User;
 
 import javax.swing.*;
 import java.awt.event.WindowEvent;
+import java.util.ArrayList;
 
 public class NewAccountPanel  extends JPanel
 {
@@ -63,9 +64,14 @@ public class NewAccountPanel  extends JPanel
         {
             if (!nametext.getText().equals("") && !passwordtext.getText().equals("") && !emailtext.getText().equals(""))
             {
-                if (isValidEmail(emailtext.getText()))
+                if (/*isValidEmail(emailtext.getText())*/ true)
                 {
-                    CCM.activeUser = new User(nametext.getText(), emailtext.getText(), passwordtext.getText());
+                    CCM.activeUser = new User(nametext.getText(), emailtext.getText(), passwordtext.getText(), new ArrayList<String>(), new ArrayList<String>(), new ArrayList<String>());
+                    addUsersToArrayList(CCM.users, new User(nametext.getText(), emailtext.getText(), passwordtext.getText(), new ArrayList<String>(), new ArrayList<String>(), new ArrayList<String>()));
+                    for (int i = 0; i < CCM.users.size(); i++)
+                    {
+                        System.out.println(CCM.users.get(i).GetID());
+                    }
                     setVisible(false);
                     gui.mainDashboardPanel.refresh();
                     gui.mainDashboardPanel.setVisible(true);
@@ -102,5 +108,14 @@ public class NewAccountPanel  extends JPanel
         String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$";
 
         return email.matches(emailRegex);
+    }
+
+    public static void addUsersToArrayList(ArrayList<User> users, User... existingUsers)
+    {
+        for (User existingUser : existingUsers)
+        {
+            User newUser = existingUser.clone();
+            users.add(newUser);
+        }
     }
 }

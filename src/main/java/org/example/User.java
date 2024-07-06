@@ -3,7 +3,7 @@ package org.example;
 import java.awt.*;
 import java.util.ArrayList;
 
-public class User
+public class User implements Cloneable
 {
     String ID;                                       //this also functions as the UserName of the user
     String email;                                    //this is a placeholder
@@ -14,14 +14,14 @@ public class User
     Image icon;                                      //this is a placeholder and will be replaced by the correct format/variable type
 
 
-    public User(String id, String em, String pw)
+    public User(String id, String em, String pw, ArrayList<String> videoids, ArrayList<String> subs, ArrayList<String> subers)
     {
         ID = id;
         email = em;
         password = pw;
-        videoIDs = new ArrayList<String>();
-        subscriptionIDs = new ArrayList<String>();
-        subscriberIDs = new ArrayList<String>();
+        videoIDs = videoids;
+        subscriptionIDs = subs;
+        subscriberIDs = subers;
     }
 
     public String GetID()
@@ -29,14 +29,33 @@ public class User
         return ID;
     }
 
+    public String GetPassword()
+    {
+        return password;
+    }
+    public String GetEmail()
+    {
+        return email;
+    }
+
+    public ArrayList<String> GetVidIDs()
+    {
+        return videoIDs;
+    }
+
+    public ArrayList<String> GetSubsIDs()
+    {
+        return subscriptionIDs;
+    }
+
+    public ArrayList<String> GetSubersIDs()
+    {
+        return subscriberIDs;
+    }
+
     public void addVideo(String vidID)
     {
         videoIDs.add(vidID);
-    }
-
-    public void print()
-    {
-        System.out.println(videoIDs);
     }
 
     public void SetToDefault()
@@ -48,5 +67,14 @@ public class User
         subscriberIDs = null;
         subscriptionIDs = null;
         icon = null;
+    }
+
+    @Override
+    public User clone() {
+        try {
+            return (User) super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

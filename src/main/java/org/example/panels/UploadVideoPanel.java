@@ -64,6 +64,7 @@ public class UploadVideoPanel extends JPanel
             {
                 CCM.activeVideo = new Video(IDgenerator.VideoGetUniqueId() ,videoTitle.getText(), videoPath.getText(), videoDescription.getText(), CCM.activeUser.GetID());
                 CCM.activeUser.addVideo(CCM.activeVideo.GetID());
+                CCM.videos.add(CCM.activeVideo);
 
                 copyFile(videoPath.getText(), "D:\\University\\Advanced Programming\\Assignments\\TermProject\\TermProject\\Videos", CCM.activeVideo.GetID());
 
