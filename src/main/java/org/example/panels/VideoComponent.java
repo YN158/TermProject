@@ -34,11 +34,12 @@ public class VideoComponent extends JPanel
             gui.channelPanel.refresh();
             gui.channelPanel.setVisible(true);
         });
-        //thumbnail = new JLabel(new ImageIcon(img));
+
+        thumbnail = new JLabel(vid.GetThumbnail());
 
         add(viewVideo, BorderLayout.CENTER);
         add(viewUploaderChannel, BorderLayout.SOUTH);
-        //add(thumbnail, BorderLayout.WEST);
+        add(thumbnail, BorderLayout.WEST);
     }
 
 }

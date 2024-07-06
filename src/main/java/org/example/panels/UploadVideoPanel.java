@@ -17,9 +17,11 @@ import java.nio.file.StandardCopyOption;
 
 public class UploadVideoPanel extends JPanel
 {
+    JLabel thumbnailPathLable;
     JLabel vidpathlable;
     JLabel vidtitlelable;
     JLabel viddesclable;
+    JTextField thumbnailPath;
     JTextField videoPath;
     JTextField videoTitle;
     JTextField videoDescription;
@@ -31,6 +33,14 @@ public class UploadVideoPanel extends JPanel
     public UploadVideoPanel(GUI gui)
     {
         setLayout(null);
+
+        thumbnailPathLable = new JLabel("Enter Thumbnail Path");
+        thumbnailPathLable.setBounds(160,80, 250, 40);
+        add(thumbnailPathLable);
+
+        thumbnailPath = new JTextField();
+        thumbnailPath.setBounds(160,120, 250, 40);
+        add(thumbnailPath);
 
         vidpathlable = new JLabel("Enter Video Path");
         vidpathlable.setBounds(160,160, 250, 40);
@@ -60,9 +70,10 @@ public class UploadVideoPanel extends JPanel
         upload.setBounds(160,440, 250, 40);
         upload.addActionListener(e ->
         {
-            if (!videoPath.getText().equals("") && !videoTitle.getText().equals("") &&  !videoDescription.getText().equals(""))
+            if (!videoPath.getText().equals("") && !videoTitle.getText().equals("") &&  !videoDescription.getText().equals("") && !thumbnailPath.getText().equals(""))
             {
-                CCM.activeVideo = new Video(IDgenerator.VideoGetUniqueId() ,videoTitle.getText(), videoPath.getText(), videoDescription.getText(), CCM.activeUser.GetID());
+                ImageIcon imageIcon = new ImageIcon(thumbnailPath.getText());
+                CCM.activeVideo = new Video(IDgenerator.VideoGetUniqueId() ,videoTitle.getText(), videoPath.getText(), videoDescription.getText(), CCM.activeUser.GetID(), imageIcon);
                 CCM.activeUser.addVideo(CCM.activeVideo.GetID());
                 CCM.videos.add(CCM.activeVideo);
 
