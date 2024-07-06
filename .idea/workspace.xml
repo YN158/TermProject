@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cc95419-82d4-4cc3-b2ee-9d1776b196aa" name="Changes" comment="added some more functions to the ChannelPanel">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/panels/IDgenerator.java" afterDir="false" />
+    <list default="true" id="0cc95419-82d4-4cc3-b2ee-9d1776b196aa" name="Changes" comment="Added the whole ID thing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CCM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/CCM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Video.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/panels/IDgenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/panels/IDgenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/panels/UploadVideoPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/panels/UploadVideoPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/panels/VideoComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/panels/VideoComponent.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -298,7 +295,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720254545606</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Added the whole ID thing">
+      <option name="closed" value="true" />
+      <created>1720257138032</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1720257138032</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -314,7 +319,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created the main classes" />
     <MESSAGE value="the main classes defined" />
     <MESSAGE value="Added the email and password variable to the User class &#10;(I forgor)" />
     <MESSAGE value="Added the &quot;correct&quot; type for User Icon and Video thumbnail.&#10;(these are still prone to change)" />
@@ -339,6 +343,7 @@
     <MESSAGE value="Created the CommentComponent for... comments... duh" />
     <MESSAGE value="added some functions to the video player" />
     <MESSAGE value="added some more functions to the ChannelPanel" />
-    <option name="LAST_COMMIT_MESSAGE" value="added some more functions to the ChannelPanel" />
+    <MESSAGE value="Added the whole ID thing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the whole ID thing" />
   </component>
 </project>
