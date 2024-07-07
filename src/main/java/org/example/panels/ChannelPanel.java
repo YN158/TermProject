@@ -123,6 +123,7 @@ public class ChannelPanel  extends JPanel
 
     public void refresh(User u)
     {
+        panelCenter.removeAll();
         newVideos = new ArrayList<VideoComponent>();
         user = u;
         pfp.setIcon(CCM.activeUser.getIcon());

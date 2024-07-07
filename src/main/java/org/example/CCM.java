@@ -27,6 +27,17 @@ public class CCM                                     //CCM of Central Class Mana
         return null;
     }
 
+    public static void updateUser(ArrayList<User> users , User updatedUser)
+    {
+        for (int i = 0; i < users.size(); i++)
+        {
+            if (users.get(i).GetID().equals(updatedUser.GetID()))
+            {
+                users.set(i, updatedUser.copy());
+            }
+        }
+    }
+
     public static Video findVideoById(ArrayList<Video> videos, String targetId)
     {
         for (Video video : videos) {

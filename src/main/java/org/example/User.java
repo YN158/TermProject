@@ -88,4 +88,9 @@ public class User implements Cloneable
             throw new RuntimeException(e);
         }
     }
+
+    public User copy()
+    {
+        return new User(this.ID, this.email, this.password, this.videoIDs, this.subscriptionIDs, this.subscriberIDs, this.icon);
+    }
 }
