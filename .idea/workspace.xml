@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cc95419-82d4-4cc3-b2ee-9d1776b196aa" name="Changes" comment="I think I fixed an issue with channels always showing the loged in channel">
-      <change afterPath="$PROJECT_DIR$/Videos/1.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Videos/4000000002.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/panels/VideoPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/panels/VideoPanel.java" afterDir="false" />
+    <list default="true" id="0cc95419-82d4-4cc3-b2ee-9d1776b196aa" name="Changes" comment="fixed an issue with likes and dislikes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CCM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/CCM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/panels/ChannelPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/panels/ChannelPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/panels/LogInPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/panels/LogInPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/panels/VideoComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/panels/VideoComponent.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -359,7 +361,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720358667519</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="fixed an issue with likes and dislikes">
+      <option name="closed" value="true" />
+      <created>1720359025695</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1720359025695</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -375,7 +385,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Initial commit of the GUI branch" />
     <MESSAGE value="Created the StartPanel" />
     <MESSAGE value="created the LogIn, CreateNewAccount, MainDashboard, Video and Channel Panel" />
     <MESSAGE value="made some changes and TRIED to import JavaFX&#10;(which didn't FUCKIN WORK)" />
@@ -400,6 +409,7 @@
     <MESSAGE value="added thumbnail support" />
     <MESSAGE value="added the select file function&#10;(so your lazy ass doesn't have to copy and paste file paths all the time)" />
     <MESSAGE value="I think I fixed an issue with channels always showing the loged in channel" />
-    <option name="LAST_COMMIT_MESSAGE" value="I think I fixed an issue with channels always showing the loged in channel" />
+    <MESSAGE value="fixed an issue with likes and dislikes" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed an issue with likes and dislikes" />
   </component>
 </project>

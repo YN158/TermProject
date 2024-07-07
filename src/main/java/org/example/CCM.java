@@ -17,4 +17,24 @@ public class CCM                                     //CCM of Central Class Mana
     public static ArrayList<User> users = new ArrayList<User>();
     public static ArrayList<Comment> comments = new ArrayList<Comment>();
 
+    public static User findUserById(ArrayList<User> users, String targetId)
+    {
+        for (User user : users) {
+            if (user.GetID().equals(targetId)) {
+                return user;
+            }
+        }
+        return null;
+    }
+
+    public static Video findVideoById(ArrayList<Video> videos, String targetId)
+    {
+        for (Video video : videos) {
+            if (video.GetID().equals(targetId)) {
+                return video;
+            }
+        }
+        return null;
+    }
+
 }

@@ -56,7 +56,7 @@ public class LogInPanel extends JPanel
             if (!nametext.getText().equals("") && !passwordtext.getText().equals(""))
             {
             System.out.println(CCM.users.getFirst().GetID() + " - " + nametext.getText());
-                User foundUser = findUserById(CCM.users, nametext.getText());
+                User foundUser = CCM.findUserById(CCM.users, nametext.getText());
 
                 if (foundUser != null)
                 {
@@ -98,15 +98,5 @@ public class LogInPanel extends JPanel
     public void refresh()
     {
 
-    }
-
-    public static User findUserById(ArrayList<User> users, String targetId)
-    {
-        for (User user : users) {
-            if (user.GetID().equals(targetId)) {
-                return user;
-            }
-        }
-        return null;
     }
 }

@@ -31,8 +31,11 @@ public class VideoComponent extends JPanel
         viewUploaderChannel = new JButton(vid.Getuploader());
         viewUploaderChannel.addActionListener(e ->
         {
+            gui.videoPanel.setVisible(false);
             gui.mainDashboardPanel.setVisible(false);
-            gui.channelPanel.refresh(LogInPanel.findUserById(CCM.users, vid.Getuploader()));
+            gui.channelPanel.setVisible(false);
+            System.out.println(CCM.findUserById(CCM.users, vid.Getuploader()).GetEmail());
+            gui.channelPanel.refresh(CCM.findUserById(CCM.users, vid.Getuploader()));
             gui.channelPanel.setVisible(true);
         });
 

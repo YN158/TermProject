@@ -7,6 +7,7 @@ import uk.co.caprica.vlcj.player.component.EmbeddedMediaPlayerComponent;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 
 public class ChannelPanel  extends JPanel
 {
@@ -28,6 +29,7 @@ public class ChannelPanel  extends JPanel
 
     User user;
     JLabel channelName;
+    ArrayList<VideoComponent> newVideos;
 
 
     public ChannelPanel(GUI g)
@@ -110,6 +112,7 @@ public class ChannelPanel  extends JPanel
             gui.uploadVideoPanel.setVisible(true);
         });
 
+        newVideos = new ArrayList<VideoComponent>();
 
         channelName = new JLabel();
         panelWest.add(channelName);
@@ -120,9 +123,21 @@ public class ChannelPanel  extends JPanel
 
     public void refresh(User u)
     {
+        newVideos = new ArrayList<VideoComponent>();
         user = u;
         pfp.setIcon(CCM.activeUser.getIcon());
         accountButton.setText(CCM.activeUser.GetID());
         channelName.setText(user.GetID());
+
+        for (int i = 0; i < user.GetVidIDs().size(); i++)
+        {
+            newVideos.add(new VideoComponent(CCM.findVideoById(CCM.videos, user.GetVidIDs().get(i)), gui));
+            System.out.println(user.GetVidIDs().get(i));
+        }
+
+        for (int i = 0; i < newVideos.size(); i++)
+        {
+            panelCenter.add(newVideos.get(i));
+        }
     }
 }
