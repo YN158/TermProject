@@ -67,7 +67,9 @@ public class MainDashboardPanel extends JPanel
         panelNorth.add(searchButton);
         searchButton.addActionListener(e ->
         {
-
+            setVisible(false);
+            gui.searchedPanel.refresh(searchbar.getText());
+            gui.searchedPanel.setVisible(true);
         });
 
         pfp = new JLabel();

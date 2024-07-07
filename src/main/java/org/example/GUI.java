@@ -15,6 +15,7 @@ public class GUI                           //this class holds all the needed pan
     public ChannelPanel channelPanel;
     public LogInPanel loginPanel;
     public UploadVideoPanel uploadVideoPanel;
+    public SearchedPanel searchedPanel;
 
 
     public GUI(String name)
@@ -28,6 +29,7 @@ public class GUI                           //this class holds all the needed pan
         channelPanel = new ChannelPanel(this);
         loginPanel = new LogInPanel(this);
         uploadVideoPanel = new UploadVideoPanel(this);
+        searchedPanel = new SearchedPanel(this);
 
         frame.add(startPanel);
         frame.add(videoPanel);
@@ -36,6 +38,7 @@ public class GUI                           //this class holds all the needed pan
         frame.add(channelPanel);
         frame.add(loginPanel);
         frame.add(uploadVideoPanel);
+        frame.add(searchedPanel);
 
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
