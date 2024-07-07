@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cc95419-82d4-4cc3-b2ee-9d1776b196aa" name="Changes" comment="added thumbnail support">
+    <list default="true" id="0cc95419-82d4-4cc3-b2ee-9d1776b196aa" name="Changes" comment="added the select file function&#10;(so your lazy ass doesn't have to copy and paste file paths all the time)">
+      <change afterPath="$PROJECT_DIR$/Videos/1.mp4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/panels/ChannelPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/panels/ChannelPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/panels/MainDashboardPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/panels/MainDashboardPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/panels/NewAccountPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/panels/NewAccountPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/panels/UploadVideoPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/panels/UploadVideoPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/panels/VideoComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/panels/VideoComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/panels/VideoPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/panels/VideoPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -343,7 +348,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720288819946</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="added the select file function&#10;(so your lazy ass doesn't have to copy and paste file paths all the time)">
+      <option name="closed" value="true" />
+      <created>1720351188230</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1720351188230</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -359,7 +372,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Configured a type for the video file in the Video class." />
     <MESSAGE value="initial commit of the merge into develop" />
     <MESSAGE value="Initial commit of the GUI branch" />
     <MESSAGE value="Created the StartPanel" />
@@ -384,6 +396,7 @@
     <MESSAGE value="Updated and implemented the Log in function" />
     <MESSAGE value="tbh at this point I don even remember what I did" />
     <MESSAGE value="added thumbnail support" />
-    <option name="LAST_COMMIT_MESSAGE" value="added thumbnail support" />
+    <MESSAGE value="added the select file function&#10;(so your lazy ass doesn't have to copy and paste file paths all the time)" />
+    <option name="LAST_COMMIT_MESSAGE" value="added the select file function&#10;(so your lazy ass doesn't have to copy and paste file paths all the time)" />
   </component>
 </project>

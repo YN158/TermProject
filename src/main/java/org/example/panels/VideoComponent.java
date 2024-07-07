@@ -1,5 +1,6 @@
 package org.example.panels;
 
+import org.example.CCM;
 import org.example.GUI;
 import org.example.Video;
 
@@ -31,11 +32,12 @@ public class VideoComponent extends JPanel
         viewUploaderChannel.addActionListener(e ->
         {
             gui.mainDashboardPanel.setVisible(false);
-            gui.channelPanel.refresh();
+            gui.channelPanel.refresh(LogInPanel.findUserById(CCM.users, vid.Getuploader()));
             gui.channelPanel.setVisible(true);
         });
 
         thumbnail = new JLabel(vid.GetThumbnail());
+        thumbnail.setPreferredSize(new Dimension(50, 50));
 
         add(viewVideo, BorderLayout.CENTER);
         add(viewUploaderChannel, BorderLayout.SOUTH);

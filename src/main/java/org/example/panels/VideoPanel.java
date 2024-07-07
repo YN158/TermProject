@@ -24,6 +24,7 @@ public class VideoPanel extends JPanel
     JButton mainPageButton;
     JTextField searchbar;
     JButton searchButton;
+    JLabel pfp;
     JButton accountButton;
     JButton logOutButton;
     JButton uploadButton;
@@ -96,12 +97,16 @@ public class VideoPanel extends JPanel
 
         });
 
+        pfp = new JLabel();
+        pfp.setPreferredSize(new Dimension(25, 25));
+        panelNorth.add(pfp);
+
         accountButton = new JButton("User");
         panelNorth.add(accountButton);
         accountButton.addActionListener(e ->
         {
             gui.channelPanel.setVisible(true);
-            gui.channelPanel.refresh();
+            gui.channelPanel.refresh(CCM.activeUser);
             setVisible(false);
         });
 
@@ -215,6 +220,7 @@ public class VideoPanel extends JPanel
 
     public void refresh()
     {
+        pfp.setIcon(CCM.activeUser.getIcon());
         subscribe.setText(CCM.activeVideo.Getuploader());
         accountButton.setText(CCM.activeUser.GetID());
         dislike.setText("Dislikes = " + CCM.activeVideo.GetDislikes());

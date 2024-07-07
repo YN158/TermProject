@@ -2,6 +2,7 @@ package org.example.panels;
 
 import org.example.CCM;
 import org.example.GUI;
+import org.example.User;
 import uk.co.caprica.vlcj.player.component.EmbeddedMediaPlayerComponent;
 
 import javax.swing.*;
@@ -19,11 +20,13 @@ public class ChannelPanel  extends JPanel
     JButton mainPageButton;
     JTextField searchbar;
     JButton searchButton;
+    JLabel pfp;
     JButton accountButton;
     JButton logOutButton;
     JButton uploadButton;
 
 
+    User user;
     JLabel channelName;
 
 
@@ -77,12 +80,16 @@ public class ChannelPanel  extends JPanel
 
         });
 
+        pfp = new JLabel();
+        pfp.setPreferredSize(new Dimension(25, 25));
+        panelNorth.add(pfp);
+
         accountButton = new JButton("User");
         panelNorth.add(accountButton);
         accountButton.addActionListener(e ->
         {
             setVisible(false);
-            gui.channelPanel.refresh();
+            gui.channelPanel.refresh(CCM.activeUser);
             gui.channelPanel.setVisible(true);
         });
 
@@ -103,6 +110,7 @@ public class ChannelPanel  extends JPanel
             gui.uploadVideoPanel.setVisible(true);
         });
 
+
         channelName = new JLabel();
         panelWest.add(channelName);
 
@@ -110,9 +118,11 @@ public class ChannelPanel  extends JPanel
         setSize(1550, 838);
     }
 
-    public void refresh()
+    public void refresh(User u)
     {
+        user = u;
+        pfp.setIcon(CCM.activeUser.getIcon());
         accountButton.setText(CCM.activeUser.GetID());
-        channelName.setText(CCM.activeUser.GetID());
+        channelName.setText(user.GetID());
     }
 }

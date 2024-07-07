@@ -6,10 +6,14 @@ import org.example.User;
 
 import javax.swing.*;
 import java.awt.event.WindowEvent;
+import java.io.File;
 import java.util.ArrayList;
 
 public class NewAccountPanel  extends JPanel
 {
+    JLabel selectPFPlable;
+    JButton selectPFP;
+    String PFPPath;
     JLabel enterName;
     JTextField nametext;
     JLabel enterEmail;
@@ -23,6 +27,18 @@ public class NewAccountPanel  extends JPanel
     public NewAccountPanel(GUI gui)
     {
         setLayout(null);
+
+        selectPFPlable = new JLabel("Select an image for PFP");
+        selectPFPlable.setBounds(160,80, 250, 40);
+        add(selectPFPlable);
+
+        selectPFP = new JButton("Open");
+        selectPFP.setBounds(160,120, 250, 40);
+        selectPFP.addActionListener(e ->
+        {
+            PFPPath = selectFile();
+        });
+        add(selectPFP);
 
         enterName = new JLabel("Enter Name");
         enterName.setBounds(160,160, 250, 40);
@@ -62,12 +78,13 @@ public class NewAccountPanel  extends JPanel
 
         create.addActionListener(e ->
         {
-            if (!nametext.getText().equals("") && !passwordtext.getText().equals("") && !emailtext.getText().equals(""))
+            if (!PFPPath.equals("") && !nametext.getText().equals("") && !passwordtext.getText().equals("") && !emailtext.getText().equals(""))
             {
                 if (isValidEmail(emailtext.getText()))
                 {
-                    CCM.activeUser = new User(nametext.getText(), emailtext.getText(), passwordtext.getText(), new ArrayList<String>(), new ArrayList<String>(), new ArrayList<String>());
-                    addUsersToArrayList(CCM.users, new User(nametext.getText(), emailtext.getText(), passwordtext.getText(), new ArrayList<String>(), new ArrayList<String>(), new ArrayList<String>()));
+                    ImageIcon pfp = new ImageIcon(PFPPath);
+                    CCM.activeUser = new User(nametext.getText(), emailtext.getText(), passwordtext.getText(), new ArrayList<String>(), new ArrayList<String>(), new ArrayList<String>(), pfp);
+                    addUsersToArrayList(CCM.users, new User(nametext.getText(), emailtext.getText(), passwordtext.getText(), new ArrayList<String>(), new ArrayList<String>(), new ArrayList<String>(), pfp));
                     for (int i = 0; i < CCM.users.size(); i++)
                     {
                         System.out.println(CCM.users.get(i).GetID());
@@ -117,5 +134,20 @@ public class NewAccountPanel  extends JPanel
             User newUser = existingUser.clone();
             users.add(newUser);
         }
+    }
+
+    public String selectFile()
+    {
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setCurrentDirectory(new File(System.getProperty("user.home")));
+        String selectedPath = "";
+
+        int result = fileChooser.showOpenDialog(this);
+        if (result == JFileChooser.APPROVE_OPTION)
+        {
+            File selectedFile = fileChooser.getSelectedFile();
+            selectedPath = selectedFile.getAbsolutePath();
+        }
+        return selectedPath;
     }
 }

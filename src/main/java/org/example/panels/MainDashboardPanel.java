@@ -18,6 +18,7 @@ public class MainDashboardPanel extends JPanel
 
     JTextField searchbar;
     JButton searchButton;
+    JLabel pfp;
     JButton accountButton;
     JButton logOutButton;
     JButton uploadButton;
@@ -69,12 +70,16 @@ public class MainDashboardPanel extends JPanel
 
         });
 
+        pfp = new JLabel();
+        pfp.setPreferredSize(new Dimension(25, 25));
+        panelNorth.add(pfp);
+
         accountButton = new JButton("User");
         panelNorth.add(accountButton);
         accountButton.addActionListener(e ->
         {
             gui.channelPanel.setVisible(true);
-            gui.channelPanel.refresh();
+            gui.channelPanel.refresh(CCM.activeUser);
             setVisible(false);
         });
 
@@ -108,6 +113,7 @@ public class MainDashboardPanel extends JPanel
     public void refresh()
     {
         accountButton.setText(CCM.activeUser.GetID());
+        pfp.setIcon(CCM.activeUser.getIcon());
 
         for (int i = 0; i < newVideos.size(); i++)
         {
