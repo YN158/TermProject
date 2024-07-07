@@ -84,6 +84,8 @@ public class VideoPanel extends JPanel
             gui.mainDashboardPanel.setVisible(true);
             gui.mainDashboardPanel.refresh();
             mediaPlayerComponent.mediaPlayer().controls().setPause(true);
+            liked = false;
+            disliked = false;
         });
 
         searchbar = new JTextField();
@@ -107,6 +109,9 @@ public class VideoPanel extends JPanel
         {
             gui.channelPanel.setVisible(true);
             gui.channelPanel.refresh(CCM.activeUser);
+            mediaPlayerComponent.mediaPlayer().controls().setPause(true);
+            liked = false;
+            disliked = false;
             setVisible(false);
         });
 
@@ -116,6 +121,9 @@ public class VideoPanel extends JPanel
         {
             setVisible(false);
             gui.startPanel.setVisible(true);
+            mediaPlayerComponent.mediaPlayer().controls().setPause(true);
+            liked = false;
+            disliked = false;
             CCM.activeUser.SetToDefault();
         });
 
@@ -125,6 +133,8 @@ public class VideoPanel extends JPanel
         {
             setVisible(false);
             mediaPlayerComponent.mediaPlayer().controls().setPause(true);
+            liked = false;
+            disliked = false;
             gui.uploadVideoPanel.setVisible(true);
         });
 
