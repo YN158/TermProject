@@ -64,7 +64,7 @@ public class NewAccountPanel  extends JPanel
         {
             if (!nametext.getText().equals("") && !passwordtext.getText().equals("") && !emailtext.getText().equals(""))
             {
-                if (/*isValidEmail(emailtext.getText())*/ true)
+                if (isValidEmail(emailtext.getText()))
                 {
                     CCM.activeUser = new User(nametext.getText(), emailtext.getText(), passwordtext.getText(), new ArrayList<String>(), new ArrayList<String>(), new ArrayList<String>());
                     addUsersToArrayList(CCM.users, new User(nametext.getText(), emailtext.getText(), passwordtext.getText(), new ArrayList<String>(), new ArrayList<String>(), new ArrayList<String>()));

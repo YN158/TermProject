@@ -14,6 +14,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+import java.io.File;
 
 public class UploadVideoPanel extends JPanel
 {
@@ -21,8 +22,10 @@ public class UploadVideoPanel extends JPanel
     JLabel vidpathlable;
     JLabel vidtitlelable;
     JLabel viddesclable;
-    JTextField thumbnailPath;
-    JTextField videoPath;
+    JButton thumbNailSelect;
+    String thumbnailPath;
+    JButton videoSelect;
+    String videoPath;
     JTextField videoTitle;
     JTextField videoDescription;
     JFileChooser j = new JFileChooser();
@@ -34,21 +37,29 @@ public class UploadVideoPanel extends JPanel
     {
         setLayout(null);
 
-        thumbnailPathLable = new JLabel("Enter Thumbnail Path");
+        thumbnailPathLable = new JLabel("Select a thumbnail for the video");
         thumbnailPathLable.setBounds(160,80, 250, 40);
         add(thumbnailPathLable);
 
-        thumbnailPath = new JTextField();
-        thumbnailPath.setBounds(160,120, 250, 40);
-        add(thumbnailPath);
+        thumbNailSelect = new JButton("Open");
+        thumbNailSelect.setBounds(160,120, 250, 40);
+        thumbNailSelect.addActionListener(e ->
+        {
+            thumbnailPath = selectFile();
+        });
+        add(thumbNailSelect);
 
-        vidpathlable = new JLabel("Enter Video Path");
+        vidpathlable = new JLabel("Select a .mp4 file");
         vidpathlable.setBounds(160,160, 250, 40);
         add(vidpathlable);
 
-        videoPath = new JTextField();
-        videoPath.setBounds(160,200, 250, 40);
-        add(videoPath);
+        videoSelect = new JButton("Open");
+        videoSelect.setBounds(160,200, 250, 40);
+        videoSelect.addActionListener(e ->
+        {
+            videoPath = selectFile();
+        });
+        add(videoSelect);
 
         vidtitlelable = new JLabel("Enter Title");
         vidtitlelable.setBounds(160,240, 250, 40);
@@ -70,14 +81,14 @@ public class UploadVideoPanel extends JPanel
         upload.setBounds(160,440, 250, 40);
         upload.addActionListener(e ->
         {
-            if (!videoPath.getText().equals("") && !videoTitle.getText().equals("") &&  !videoDescription.getText().equals("") && !thumbnailPath.getText().equals(""))
+            if (!videoPath.equals("") && !videoTitle.getText().equals("") &&  !videoDescription.getText().equals("") && !thumbnailPath.equals(""))
             {
-                ImageIcon imageIcon = new ImageIcon(thumbnailPath.getText());
-                CCM.activeVideo = new Video(IDgenerator.VideoGetUniqueId() ,videoTitle.getText(), videoPath.getText(), videoDescription.getText(), CCM.activeUser.GetID(), imageIcon);
+                ImageIcon imageIcon = new ImageIcon(thumbnailPath);
+                CCM.activeVideo = new Video(IDgenerator.VideoGetUniqueId() ,videoTitle.getText(), videoPath, videoDescription.getText(), CCM.activeUser.GetID(), imageIcon);
                 CCM.activeUser.addVideo(CCM.activeVideo.GetID());
                 CCM.videos.add(CCM.activeVideo);
 
-                copyFile(videoPath.getText(), "D:\\University\\Advanced Programming\\Assignments\\TermProject\\TermProject\\Videos", CCM.activeVideo.GetID());
+                copyFile(videoPath, "D:\\University\\Advanced Programming\\Assignments\\TermProject\\TermProject\\Videos", CCM.activeVideo.GetID());
 
                 gui.videoPanel.playVideo("D:\\University\\Advanced Programming\\Assignments\\TermProject\\TermProject\\Videos\\" + CCM.activeVideo.GetID() + ".mp4");
 
@@ -96,7 +107,7 @@ public class UploadVideoPanel extends JPanel
         exit.addActionListener(e ->
         {
             setVisible(false);
-            videoPath.setText("");
+            videoPath = "";
             videoTitle.setText("");
             videoDescription.setText("");
             gui.mainDashboardPanel.setVisible(true);
@@ -119,6 +130,21 @@ public class UploadVideoPanel extends JPanel
         } catch (IOException e) {
             System.err.println("Error copying file: " + e.getMessage());
         }
+    }
+
+    public String selectFile()
+    {
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setCurrentDirectory(new File(System.getProperty("user.home")));
+        String selectedPath = "";
+
+        int result = fileChooser.showOpenDialog(this);
+        if (result == JFileChooser.APPROVE_OPTION)
+        {
+            File selectedFile = fileChooser.getSelectedFile();
+            selectedPath = selectedFile.getAbsolutePath();
+        }
+        return selectedPath;
     }
 
     public void refresh()
