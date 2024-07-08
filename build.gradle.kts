@@ -10,7 +10,7 @@ repositories {
 }
 
 dependencies {
-    testImplementation(platform("org.junit:junit-bom:5.9.1"))
+    /*testImplementation(platform("org.junit:junit-bom:5.9.1"))
     testImplementation("org.junit.jupiter:junit-jupiter")
     testImplementation("org.openjfx:javafx-controls:19")
     testImplementation("org.openjfx:javafx-fxml:19")
@@ -23,7 +23,7 @@ dependencies {
     implementation("org.springframework.ai:spring-ai-mongodb-atlas-store-spring-boot-starter")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("io.projectreactor:reactor-test")
-    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")*/
 
     //I genuinely have 0 idea which one of these is needed
 }
