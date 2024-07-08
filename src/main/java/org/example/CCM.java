@@ -47,5 +47,14 @@ public class CCM                                     //CCM of Central Class Mana
         }
         return null;
     }
+    public static Comment findCommentById(ArrayList<Comment> comments, String targetId)
+    {
+        for (Comment comment : comments) {
+            if (comment.GetID().equals(targetId)) {
+                return comment;
+            }
+        }
+        return null;
+    }
 
 }

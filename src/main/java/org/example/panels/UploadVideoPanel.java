@@ -15,6 +15,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.io.File;
+import java.util.ArrayList;
 
 public class UploadVideoPanel extends JPanel
 {
@@ -84,7 +85,7 @@ public class UploadVideoPanel extends JPanel
             if (!videoPath.equals("") && !videoTitle.getText().equals("") &&  !videoDescription.getText().equals("") && !thumbnailPath.equals(""))
             {
                 ImageIcon imageIcon = new ImageIcon(thumbnailPath);
-                CCM.activeVideo = new Video(IDgenerator.VideoGetUniqueId() ,videoTitle.getText(), videoPath, videoDescription.getText(), CCM.activeUser.GetID(), imageIcon);
+                CCM.activeVideo = new Video(IDgenerator.VideoGetUniqueId() ,videoTitle.getText(), videoPath, videoDescription.getText(), new ArrayList<String>() , CCM.activeUser.GetID(), imageIcon);
                 CCM.activeUser.addVideo(CCM.activeVideo.GetID());
                 CCM.videos.add(CCM.activeVideo);
                 CCM.updateUser(CCM.users, CCM.activeUser);

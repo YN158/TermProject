@@ -1,10 +1,12 @@
 package org.example.panels;
 
 import org.example.CCM;
+import org.example.Comment;
 import org.example.GUI;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 
 import uk.co.caprica.vlcj.factory.MediaPlayerFactory;
 import uk.co.caprica.vlcj.player.component.EmbeddedMediaPlayerComponent;
@@ -30,6 +32,8 @@ public class VideoPanel extends JPanel
     JButton uploadButton;
 
 
+    JLabel videoTitle;
+    JLabel videoDescription;
     JButton subscribe;
     JButton pause;
     JButton like;
@@ -38,6 +42,10 @@ public class VideoPanel extends JPanel
     boolean disliked = false;
     JButton mute;
 
+    JTextField writeComment;
+    JButton postComment;
+    ArrayList<CommentComponent> commentComps;
+    ArrayList<Comment> comments;
 
     public VideoPanel(GUI g)
     {
@@ -66,6 +74,7 @@ public class VideoPanel extends JPanel
         add(panelCenter, BorderLayout.CENTER);
 
         panelNorth.setLayout(new FlowLayout());
+        panelEast.setLayout(new GridLayout(5, 1));
 
         //---------------------------------- Other Components ----------------------------------
 
@@ -141,6 +150,12 @@ public class VideoPanel extends JPanel
         });
 
         //---------------------------------- Video Control Components ----------------------------------
+
+        videoTitle = new JLabel();
+        panelSouth.add(videoTitle);
+
+        videoDescription = new JLabel();
+        panelSouth.add(videoDescription);
 
         subscribe = new JButton();
         panelSouth.add(subscribe);
@@ -219,6 +234,25 @@ public class VideoPanel extends JPanel
             mediaPlayerComponent.mediaPlayer().audio().mute();
         });
 
+        //------------------------------------ Comment Components ----------------------------
+
+        commentComps = new ArrayList<CommentComponent>();
+
+        writeComment = new JTextField();
+        panelEast.add(writeComment);
+
+        postComment = new JButton("Post Comment");
+        postComment.addActionListener(e ->
+        {
+            if(!writeComment.getText().equals(""))
+            {
+                CCM.comments.add(new Comment(IDgenerator.CommentGetUniqueId(), CCM.activeVideo.GetID(), CCM.activeUser.GetID(), writeComment.getText()));
+                CCM.activeVideo.AddComment(CCM.comments.getLast().GetID());
+                refresh();
+            }
+        });
+        panelEast.add(postComment);
+
         setVisible(false);
         setSize(1550, 838);
     }
@@ -232,6 +266,22 @@ public class VideoPanel extends JPanel
 
     public void refresh()
     {
+        panelEast.removeAll();
+
+        commentComps = new ArrayList<CommentComponent>();
+
+        for (int i = 0; i < CCM.activeVideo.GetCommentIDs().size(); i++)
+        {
+            commentComps.add(new CommentComponent(CCM.findCommentById(CCM.comments, CCM.activeVideo.GetCommentIDs().get(i)), gui));
+        }
+
+        for (int i = 0; i < commentComps.size(); i++)
+        {
+            panelEast.add(commentComps.get(i));
+        }
+
+        videoTitle.setText(CCM.activeVideo.GetTitle());
+        videoDescription.setText(CCM.activeVideo.GetDescription());
         pfp.setIcon(CCM.activeUser.getIcon());
         subscribe.setText(CCM.activeVideo.Getuploader());
         accountButton.setText(CCM.activeUser.GetID());

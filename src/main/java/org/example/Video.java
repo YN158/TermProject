@@ -17,12 +17,13 @@ public class Video
     int dislike;                                     //to store the number of dislikes
     ImageIcon thumbnail;                                 //this is a placeholder and will be replaced by the correct format/variable type
 
-    public Video(String id, String ttl ,String path, String  desc, String uploaderid, ImageIcon img)
+    public Video(String id, String ttl ,String path, String  desc, ArrayList<String> commentids, String uploaderid, ImageIcon img)
     {
         ID = id;
         title = ttl;
         videoPath = path;
         description = desc;
+        commentIDs = commentids;
         channelID = uploaderid;
         thumbnail = img;
     }
@@ -35,6 +36,11 @@ public class Video
     public String GetTitle()
     {
         return title;
+    }
+
+    public String GetDescription()
+    {
+        return description;
     }
 
     public int GetLikes()
@@ -51,9 +57,15 @@ public class Video
     {
         return channelID;
     }
+
     public ImageIcon GetThumbnail()
     {
         return thumbnail;
+    }
+
+    public ArrayList<String> GetCommentIDs()
+    {
+        return commentIDs;
     }
 
     public void AddLike()
@@ -74,6 +86,11 @@ public class Video
     public void RemoveDislike()
     {
         dislike--;
+    }
+
+    public void AddComment(String commentID)
+    {
+        commentIDs.add(new String(commentID));
     }
 
 }

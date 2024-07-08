@@ -34,8 +34,7 @@ public class VideoComponent extends JPanel
             gui.videoPanel.setVisible(false);
             gui.mainDashboardPanel.setVisible(false);
             gui.channelPanel.setVisible(false);
-            System.out.println("HI" + vid.GetID());
-            System.out.println(CCM.findUserById(CCM.users, vid.Getuploader()).GetID());
+
             gui.channelPanel.refresh(CCM.findUserById(CCM.users, vid.Getuploader()));
             gui.channelPanel.setVisible(true);
         });
