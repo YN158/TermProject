@@ -12,7 +12,8 @@ public class User implements Cloneable
     ArrayList<String> videoIDs;                      //to store the IDs of the videos belonging to your channel
     ArrayList<String> subscriberIDs;                 //to store the IDs of channels/accounts which are subscribed to you
     ArrayList<String> subscriptionIDs;               //to store the IDs of the channels/accounts you are subscribed to
-    ImageIcon icon;                                      //this is a placeholder and will be replaced by the correct format/variable type
+    ImageIcon icon;                                  //this is a placeholder and will be replaced by the correct format/variable type
+    ArrayList<PlayList> playLists;
 
 
     public User(String id, String em, String pw, ArrayList<String> videoids, ArrayList<String> subs, ArrayList<String> subers, ImageIcon img)
@@ -57,6 +58,10 @@ public class User implements Cloneable
     public ImageIcon getIcon()
     {
         return icon;
+    }
+
+    public ArrayList<PlayList> getPlayLists() {
+        return playLists;
     }
 
     public void addVideo(String vidID)

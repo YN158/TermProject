@@ -45,7 +45,6 @@ public class VideoPanel extends JPanel
     JTextField writeComment;
     JButton postComment;
     ArrayList<CommentComponent> commentComps;
-    ArrayList<Comment> comments;
 
     public VideoPanel(GUI g)
     {
@@ -61,8 +60,8 @@ public class VideoPanel extends JPanel
         panelCenter = new JPanel();
 
         panelNorth.setPreferredSize(new Dimension(100, 100));
-        panelWest.setPreferredSize(new Dimension(100, 100));
-        panelEast.setPreferredSize(new Dimension(100, 100));
+        panelWest.setPreferredSize(new Dimension(200, 100));
+        panelEast.setPreferredSize(new Dimension(200, 100));
         panelSouth.setPreferredSize(new Dimension(100, 100));
         panelCenter.setPreferredSize(new Dimension(100, 100));
 
@@ -75,6 +74,7 @@ public class VideoPanel extends JPanel
 
         panelNorth.setLayout(new FlowLayout());
         panelEast.setLayout(new GridLayout(5, 1));
+        panelWest.setLayout(new GridLayout(5, 1));
 
         //---------------------------------- Other Components ----------------------------------
 
@@ -234,12 +234,12 @@ public class VideoPanel extends JPanel
             mediaPlayerComponent.mediaPlayer().audio().mute();
         });
 
-        //------------------------------------ Comment Components ----------------------------
+        //------------------------------------ Comment Components ------------------------------------
 
         commentComps = new ArrayList<CommentComponent>();
 
         writeComment = new JTextField();
-        panelEast.add(writeComment);
+        panelWest.add(writeComment);
 
         postComment = new JButton("Post Comment");
         postComment.addActionListener(e ->
@@ -247,11 +247,13 @@ public class VideoPanel extends JPanel
             if(!writeComment.getText().equals(""))
             {
                 CCM.comments.add(new Comment(IDgenerator.CommentGetUniqueId(), CCM.activeVideo.GetID(), CCM.activeUser.GetID(), writeComment.getText()));
+                System.out.println(CCM.comments.getLast().GetBody());
                 CCM.activeVideo.AddComment(CCM.comments.getLast().GetID());
+                System.out.println(CCM.findCommentById(CCM.comments, CCM.activeVideo.GetCommentIDs().getLast()).GetBody());
                 refresh();
             }
         });
-        panelEast.add(postComment);
+        panelWest.add(postComment);
 
         setVisible(false);
         setSize(1550, 838);

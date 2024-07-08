@@ -17,6 +17,11 @@ public class CCM                                     //CCM of Central Class Mana
     public static ArrayList<User> users = new ArrayList<User>();
     public static ArrayList<Comment> comments = new ArrayList<Comment>();
 
+    // getAll
+    // updateVideos
+    // updateUsers
+    // updateComments
+
     public static User findUserById(ArrayList<User> users, String targetId)
     {
         for (User user : users) {

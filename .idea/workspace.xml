@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cc95419-82d4-4cc3-b2ee-9d1776b196aa" name="Changes" comment="made the whole search video thingy">
-      <change afterPath="$PROJECT_DIR$/Videos/1.mp4" afterDir="false" />
+    <list default="true" id="0cc95419-82d4-4cc3-b2ee-9d1776b196aa" name="Changes" comment="implementing the comment thing">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/PlayList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CCM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/CCM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Video.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/panels/CommentComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/panels/CommentComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/panels/UploadVideoPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/panels/UploadVideoPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/panels/VideoComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/panels/VideoComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/panels/VideoPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/panels/VideoPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -397,7 +393,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720386237888</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="implementing the comment thing">
+      <option name="closed" value="true" />
+      <created>1720422757880</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1720422757880</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -413,7 +417,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Removed the Video Blob since its too hard and let's just store the videos locally and I will commit arson" />
     <MESSAGE value="I don't even know what stage I'm in I'm just doing shit." />
     <MESSAGE value="new account panel" />
     <MESSAGE value="uhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh" />
@@ -438,6 +441,7 @@
     <MESSAGE value="trying to implement the ability to view a channels videos" />
     <MESSAGE value="fixed the dynamic channel page thingy" />
     <MESSAGE value="made the whole search video thingy" />
-    <option name="LAST_COMMIT_MESSAGE" value="made the whole search video thingy" />
+    <MESSAGE value="implementing the comment thing" />
+    <option name="LAST_COMMIT_MESSAGE" value="implementing the comment thing" />
   </component>
 </project>
