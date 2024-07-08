@@ -7,13 +7,15 @@ public class Server {
     private static final int SERVER_PORT = 8080;
     private static final String VIDEO_FOLDER = "C:\\Users\\Lenovo\\Desktop\\Server\\";
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         try {
-            // Create a server socket to listen for incoming connections
+            printIPAddress();
             ServerSocket serverSocket = new ServerSocket(SERVER_PORT);
             System.out.println("Server started. Listening on port " + SERVER_PORT);
 
-            while (true) {
+            while (true)
+            {
                 // Wait for a client connection
                 Socket clientSocket = serverSocket.accept();
                 System.out.println("Client connected: " + clientSocket.getInetAddress().getHostAddress());
@@ -21,21 +23,27 @@ public class Server {
                 // Handle the client connection in a separate thread
                 new ClientHandler(clientSocket).start();
             }
-        } catch (IOException e) {
+        }
+        catch (IOException e)
+        {
             e.printStackTrace();
         }
     }
 
-    private static class ClientHandler extends Thread {
+    private static class ClientHandler extends Thread
+    {
         private final Socket clientSocket;
 
-        public ClientHandler(Socket socket) {
+        public ClientHandler(Socket socket)
+        {
             this.clientSocket = socket;
         }
 
         @Override
-        public void run() {
-            try {
+        public void run()
+        {
+            try
+            {
                 DataInputStream dis = new DataInputStream(clientSocket.getInputStream());
                 DataOutputStream dos = new DataOutputStream(clientSocket.getOutputStream());
 
@@ -55,12 +63,15 @@ public class Server {
                 dis.close();
                 dos.close();
                 clientSocket.close();
-            } catch (IOException e) {
+            }
+            catch (IOException e)
+            {
                 e.printStackTrace();
             }
         }
 
-        private void receiveVideo(DataInputStream dis, DataOutputStream dos) throws IOException {
+        private void receiveVideo(DataInputStream dis, DataOutputStream dos) throws IOException
+        {
             // Receive the video file name from the client
             String videoName = dis.readUTF();
             File file = new File(VIDEO_FOLDER + videoName);
@@ -69,14 +80,16 @@ public class Server {
             FileOutputStream fos = new FileOutputStream(file);
             byte[] buffer = new byte[4096];
             int bytesRead;
-            while ((bytesRead = dis.read(buffer)) != -1) {
+            while ((bytesRead = dis.read(buffer)) != -1)
+            {
                 fos.write(buffer, 0, bytesRead);
             }
             fos.close();
             System.out.println("Video received successfully: " + file.getAbsolutePath());
         }
 
-        private void sendVideo(DataInputStream dis, DataOutputStream dos) throws IOException {
+        private void sendVideo(DataInputStream dis, DataOutputStream dos) throws IOException
+        {
             // Receive the video file name from the client
             String videoName = dis.readUTF();
             File file = new File(VIDEO_FOLDER + videoName);
@@ -85,12 +98,27 @@ public class Server {
             FileInputStream fis = new FileInputStream(file);
             byte[] buffer = new byte[4096];
             int bytesRead;
-            while ((bytesRead = fis.read(buffer)) != -1) {
+            while ((bytesRead = fis.read(buffer)) != -1)
+            {
                 dos.write(buffer, 0, bytesRead);
             }
             dos.flush();
             fis.close();
             System.out.println("Video sent successfully to the client.");
+        }
+    }
+
+    public static void printIPAddress()
+    {
+        try
+        {
+            InetAddress localHost = InetAddress.getLocalHost();
+            System.out.println("Server's IP address is: " + localHost.getHostAddress());
+        }
+        catch (UnknownHostException e)
+        {
+            System.out.println("Unable to get local host IP address.");
+            e.printStackTrace();
         }
     }
 }
