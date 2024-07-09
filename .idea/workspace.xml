@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cc95419-82d4-4cc3-b2ee-9d1776b196aa" name="Changes" comment="added an option to get the IP address of the server">
+    <list default="true" id="0cc95419-82d4-4cc3-b2ee-9d1776b196aa" name="Changes" comment="final commit">
+      <change afterPath="$PROJECT_DIR$/src/test/resources/cocnut.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CCM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/CCM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/panels/StartPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/panels/StartPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -416,7 +416,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720422757880</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="final commit">
+      <option name="closed" value="true" />
+      <created>1720514641106</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1720514641106</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -432,7 +440,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="I don't even know what stage I'm in I'm just doing shit." />
     <MESSAGE value="new account panel" />
     <MESSAGE value="uhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh" />
     <MESSAGE value="well I think it worked? VLCJ lezz go???" />
@@ -457,7 +464,8 @@
     <MESSAGE value="fixed the dynamic channel page thingy" />
     <MESSAGE value="made the whole search video thingy" />
     <MESSAGE value="implementing the comment thing" />
-    <option name="LAST_COMMIT_MESSAGE" value="implementing the comment thing" />
+    <MESSAGE value="final commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="final commit" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TermProject$Main.ic" NAME="Main Coverage Results" MODIFIED="1720453934701" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

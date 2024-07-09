@@ -17,7 +17,8 @@ public class StartPanel extends JPanel
 
     public StartPanel(GUI gui)
     {
-        if (CCM.isFilePresent("D:\\University\\Advanced Programming\\Assignments\\TermProject\\TermProject\\build\\classes\\cocnut.jpg"))
+        //I have no fucking idea who put this here, but when I deleted it the game wouldn’t start. Words cannot describe my fucking confusion.
+        if (CCM.isFilePresent("D:\\University\\Advanced Programming\\Assignments\\TermProject\\TermProject\\src\\test\\resources\\cocnut.jpg"))
         {
             setLayout(null);
 
