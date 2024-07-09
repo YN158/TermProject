@@ -6,7 +6,7 @@ import java.net.*;
 public class Client {
     private static final String SERVER_IP = "127.0.0.1";
     private static final int SERVER_PORT = 8080;
-    private static final String VIDEO_FOLDER = "C:\\Users\\Lenovo\\Desktop\\Client\\";
+    private static final String VIDEO_FOLDER = "D:\\University\\Advanced Programming\\Assignments\\TermProject\\TermProject\\Videos\\";
 
     public static void sendVideo(String videoName) {
         try {

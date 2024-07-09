@@ -7,7 +7,7 @@ import java.net.*;
 
 public class Server {
     private static final int SERVER_PORT = 8080;
-    private static final String VIDEO_FOLDER = "C:\\Users\\Lenovo\\Desktop\\Server\\";
+    private static final String VIDEO_FOLDER = "D:\\University\\Advanced Programming\\Assignments\\TermProject\\TermProject\\VideoServer\\";
 
     static JFrame frame;
     static JLabel label;
