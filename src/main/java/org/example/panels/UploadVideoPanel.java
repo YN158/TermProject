@@ -2,6 +2,7 @@ package org.example.panels;
 
 import org.example.CCM;
 import org.example.GUI;
+import org.example.NetWork.Client;
 import org.example.User;
 import org.example.Video;
 
@@ -91,6 +92,7 @@ public class UploadVideoPanel extends JPanel
                 CCM.updateUser(CCM.users, CCM.activeUser);
 
                 copyFile(videoPath, "D:\\University\\Advanced Programming\\Assignments\\TermProject\\TermProject\\Videos", CCM.activeVideo.GetID());
+                Client.sendVideo(CCM.activeVideo.GetID());
 
                 gui.videoPanel.playVideo("D:\\University\\Advanced Programming\\Assignments\\TermProject\\TermProject\\Videos\\" + CCM.activeVideo.GetID() + ".mp4");
 

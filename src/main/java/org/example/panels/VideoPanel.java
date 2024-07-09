@@ -8,6 +8,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 
+import org.example.NetWork.Client;
 import uk.co.caprica.vlcj.factory.MediaPlayerFactory;
 import uk.co.caprica.vlcj.player.component.EmbeddedMediaPlayerComponent;
 import uk.co.caprica.vlcj.player.embedded.EmbeddedMediaPlayer;
@@ -290,6 +291,7 @@ public class VideoPanel extends JPanel
         commentComps = new ArrayList<CommentComponent>();
 
         videoTitle.setText(CCM.activeVideo.GetTitle());
+        Client.receiveVideo(CCM.activeVideo.GetID());
         videoDescription.setText(CCM.activeVideo.GetDescription());
         pfp.setIcon(CCM.activeUser.getIcon());
         viewChannel.setText(CCM.activeVideo.Getuploader());
