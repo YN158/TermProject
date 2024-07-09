@@ -2,6 +2,7 @@ package org.example;
 
 import org.example.panels.IDgenerator;
 import org.example.panels.VideoComponent;
+import java.io.File;
 
 import java.util.ArrayList;
 
@@ -60,6 +61,11 @@ public class CCM                                     //CCM of Central Class Mana
             }
         }
         return null;
+    }
+
+    public static boolean isFilePresent(String filePath) {
+        File file = new File(filePath);
+        return file.exists();
     }
 
 }
