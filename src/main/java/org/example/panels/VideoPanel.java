@@ -47,7 +47,7 @@ public class VideoPanel extends JPanel
     JTextField writeComment;
     JButton postComment;
     ArrayList<CommentComponent> commentComps;
-    JTextField commentSection;                                    //place holder
+    JTextArea commentSection;                                    //place holder
 
     public VideoPanel(GUI g)
     {
@@ -270,7 +270,8 @@ public class VideoPanel extends JPanel
         });
         panelWest.add(postComment);
 
-        commentSection = new JTextField();
+        commentSection = new JTextArea();
+        commentSection.setLineWrap(true);
         commentSection.setEditable(false);
         commentSection.setPreferredSize(new Dimension(100, 800));
         panelEast.add(commentSection);
