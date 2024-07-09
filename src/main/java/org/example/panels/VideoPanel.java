@@ -45,6 +45,7 @@ public class VideoPanel extends JPanel
     JTextField writeComment;
     JButton postComment;
     ArrayList<CommentComponent> commentComps;
+    JLabel commentSection;                                    //place holder
 
     public VideoPanel(GUI g)
     {
@@ -73,7 +74,7 @@ public class VideoPanel extends JPanel
         add(panelCenter, BorderLayout.CENTER);
 
         panelNorth.setLayout(new FlowLayout());
-        panelEast.setLayout(new GridLayout(5, 1));
+        //panelEast.setLayout(new GridLayout(5, 1));
         panelWest.setLayout(new GridLayout(5, 1));
 
         //---------------------------------- Other Components ----------------------------------
@@ -255,6 +256,9 @@ public class VideoPanel extends JPanel
         });
         panelWest.add(postComment);
 
+        commentSection = new JLabel();
+        panelEast.add(commentSection);
+
         setVisible(false);
         setSize(1550, 838);
     }
@@ -268,19 +272,9 @@ public class VideoPanel extends JPanel
 
     public void refresh()
     {
-        panelEast.removeAll();
+        //panelEast.removeAll();
 
         commentComps = new ArrayList<CommentComponent>();
-
-        for (int i = 0; i < CCM.activeVideo.GetCommentIDs().size(); i++)
-        {
-            commentComps.add(new CommentComponent(CCM.findCommentById(CCM.comments, CCM.activeVideo.GetCommentIDs().get(i)), gui));
-        }
-
-        for (int i = 0; i < commentComps.size(); i++)
-        {
-            panelEast.add(commentComps.get(i));
-        }
 
         videoTitle.setText(CCM.activeVideo.GetTitle());
         videoDescription.setText(CCM.activeVideo.GetDescription());
@@ -289,5 +283,18 @@ public class VideoPanel extends JPanel
         accountButton.setText(CCM.activeUser.GetID());
         dislike.setText("Dislikes = " + CCM.activeVideo.GetDislikes());
         like.setText("Likes = " + CCM.activeVideo.GetLikes());
+
+        for (int i = 0; i < CCM.activeVideo.GetCommentIDs().size(); i++)
+        {
+            commentComps.add(new CommentComponent(CCM.findCommentById(CCM.comments, CCM.activeVideo.GetCommentIDs().get(i)), gui));
+        }
+
+        commentSection.setText("");
+
+        for (int i = 0; i < commentComps.size(); i++)
+        {
+            commentSection.setText(commentComps.get(i).viewAuthorChannel.getText() + "\n" + commentComps.get(i).commentBody.getText() + "\n");
+        }
+        System.out.println(panelEast.getComponentCount());
     }
 }
