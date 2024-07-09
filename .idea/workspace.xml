@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cc95419-82d4-4cc3-b2ee-9d1776b196aa" name="Changes" comment="initializing the MangoDB classes">
+    <list default="true" id="0cc95419-82d4-4cc3-b2ee-9d1776b196aa" name="Changes" comment="Finalized all of the required database functions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/NetWork/MongoDBConnectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/NetWork/MongoDBConnectionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/NetWork/MongoDBRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/NetWork/MongoDBRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Video.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/panels/NewAccountPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/panels/NewAccountPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -309,12 +305,19 @@
       <option name="project" value="LOCAL" />
       <updated>1720543282162</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Finalized all of the required database functions">
+      <option name="closed" value="true" />
+      <created>1720545043079</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1720545043079</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created the main classes" />
     <MESSAGE value="the main classes defined" />
     <MESSAGE value="Added the email and password variable to the User class &#10;(I forgor)" />
     <MESSAGE value="Added the &quot;correct&quot; type for User Icon and Video thumbnail.&#10;(these are still prone to change)" />
@@ -339,7 +342,8 @@
     <MESSAGE value="Sorta fixed the comments" />
     <MESSAGE value="Trying to configure the DB" />
     <MESSAGE value="initializing the MangoDB classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="initializing the MangoDB classes" />
+    <MESSAGE value="Finalized all of the required database functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finalized all of the required database functions" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TermProject$Main.ic" NAME="Main Coverage Results" MODIFIED="1720453934701" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
