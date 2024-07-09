@@ -129,8 +129,9 @@ public class SearchedPanel extends JPanel
 
         accountButton.setText(CCM.activeUser.GetID());
         pfp.setIcon(CCM.activeUser.getIcon());
-
-        searchedVideos = searchVideoByTitle(CCM.videos, searchedPhrase);
+        searchedVideos = null;
+        searchedVideos = searchVideoByUploader(CCM.videos, searchedPhrase);
+        searchedVideos.addAll(searchVideoByTitle(CCM.videos, searchedPhrase));
 
         for (int i = 0; i < searchedVideos.size(); i++)
         {
@@ -153,6 +154,12 @@ public class SearchedPanel extends JPanel
     {
         return videos.stream()
                 .filter(video -> video.GetTitle().contains(titleSearch))
+                .collect(Collectors.toCollection(ArrayList::new));
+    }
+    public static ArrayList<Video> searchVideoByUploader(ArrayList<Video> videos, String uploaderSearch)
+    {
+        return videos.stream()
+                .filter(video -> video.Getuploader().contains(uploaderSearch))
                 .collect(Collectors.toCollection(ArrayList::new));
     }
 }

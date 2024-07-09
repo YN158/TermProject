@@ -88,7 +88,7 @@ public class NewAccountPanel  extends JPanel
                         ImageIcon pfp = new ImageIcon(PFPPath);
                         CCM.activeUser = new User(nametext.getText(), emailtext.getText(), passwordtext.getText(), new ArrayList<String>(), new ArrayList<String>(), new ArrayList<String>(), pfp);
                         addUsersToArrayList(CCM.users, new User(nametext.getText(), emailtext.getText(), passwordtext.getText(), new ArrayList<String>(), new ArrayList<String>(), new ArrayList<String>(), pfp));
-                        Main.repository.insertUser(CCM.activeUser);
+                        //Main.repository.insertUser(CCM.activeUser);
                         for (int i = 0; i < CCM.users.size(); i++)
                         {
                             System.out.println(CCM.users.get(i).GetID());
