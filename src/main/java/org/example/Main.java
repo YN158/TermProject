@@ -7,9 +7,8 @@ import java.io.IOException;
 
 public class Main
 {
-    public static void main(String[] args) throws IOException
+    public static void main(String[] args)
     {
-        Client.sendVideo("1");
-        Client.receiveVideo("2");
+        GUI gui = new GUI("TUBE");
     }
 }

@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cc95419-82d4-4cc3-b2ee-9d1776b196aa" name="Changes" comment="added the dependencies">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/NetWork/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/NetWork/Server.java" afterDir="false" />
+    <list default="true" id="0cc95419-82d4-4cc3-b2ee-9d1776b196aa" name="Changes" comment="minor fixes">
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/panels/NewAccountPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/panels/NewAccountPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,10 +44,13 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Client-and-server-development" />
+        <entry key="$PROJECT_DIR$" value="Classes" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -64,15 +66,16 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Coverage&quot;,
     &quot;Gradle.Build TermProject.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.TermProject [:Main.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TermProject [:Server.main()].executor&quot;: &quot;Run&quot;,
     &quot;Kotlin script (Beta).build.gradle.kts.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/University/Advanced Programming/Assignments/TermProject/TermProject&quot;
+    &quot;last_opened_file_path&quot;: &quot;D:/University/Advanced Programming/Assignments/Practice/Practice&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
   <component name="SharedIndexes">
@@ -163,120 +166,320 @@
       <option name="project" value="LOCAL" />
       <updated>1718542807023</updated>
     </task>
-    <task id="LOCAL-00010" summary="Removed the Blob videFile variable form the Video class &#10;(we'll just save the video locally fuck this shit)">
+    <task id="LOCAL-00010" summary="initial commit of the merge into develop">
       <option name="closed" value="true" />
-      <created>1718951812503</created>
+      <created>1718613764208</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1718951812503</updated>
+      <updated>1718613764208</updated>
     </task>
-    <task id="LOCAL-00011" summary="initial commit of the Client and Server Branch&#10;(This branch is dedicated to developing the server and client side of the program)">
+    <task id="LOCAL-00011" summary="Initial commit of the GUI branch">
       <option name="closed" value="true" />
-      <created>1718951856195</created>
+      <created>1718627325007</created>
       <option name="number" value="00011" />
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
-      <updated>1718951856195</updated>
+      <updated>1718627325007</updated>
     </task>
-    <task id="LOCAL-00012" summary="Implemented the Server and Client Class.&#10;(for the time being the Client can only send a message which the server prints, this is just a simple test and will be changed)">
+    <task id="LOCAL-00012" summary="Created the StartPanel">
       <option name="closed" value="true" />
-      <created>1718952609995</created>
+      <created>1718700731191</created>
       <option name="number" value="00012" />
       <option name="presentableId" value="LOCAL-00012" />
       <option name="project" value="LOCAL" />
-      <updated>1718952609995</updated>
+      <updated>1718700731191</updated>
     </task>
-    <task id="LOCAL-00013" summary="Tested the Client and Server in the Main file&#10;It wowked :3">
+    <task id="LOCAL-00013" summary="created the LogIn, CreateNewAccount, MainDashboard, Video and Channel Panel">
       <option name="closed" value="true" />
-      <created>1718953276985</created>
+      <created>1718703570318</created>
       <option name="number" value="00013" />
       <option name="presentableId" value="LOCAL-00013" />
       <option name="project" value="LOCAL" />
-      <updated>1718953276985</updated>
+      <updated>1718703570318</updated>
     </task>
-    <task id="LOCAL-00014" summary="Implimented the MangoDB database">
+    <task id="LOCAL-00014" summary="made some changes and TRIED to import JavaFX&#10;(which didn't FUCKIN WORK)">
       <option name="closed" value="true" />
-      <created>1719473995105</created>
+      <created>1718897650470</created>
       <option name="number" value="00014" />
       <option name="presentableId" value="LOCAL-00014" />
       <option name="project" value="LOCAL" />
-      <updated>1719473995105</updated>
+      <updated>1718897650470</updated>
     </task>
-    <task id="LOCAL-00015" summary="updated the Build_gradle file">
+    <task id="LOCAL-00015" summary="Removed the Video Blob since its too hard and let's just store the videos locally and I will commit arson">
       <option name="closed" value="true" />
-      <created>1720193524627</created>
+      <created>1718907316126</created>
       <option name="number" value="00015" />
       <option name="presentableId" value="LOCAL-00015" />
       <option name="project" value="LOCAL" />
-      <updated>1720193524627</updated>
+      <updated>1718907316126</updated>
     </task>
-    <task id="LOCAL-00016" summary="updated the User class">
+    <task id="LOCAL-00016" summary="I don't even know what stage I'm in I'm just doing shit.">
       <option name="closed" value="true" />
-      <created>1720193683651</created>
+      <created>1720001744322</created>
       <option name="number" value="00016" />
       <option name="presentableId" value="LOCAL-00016" />
       <option name="project" value="LOCAL" />
-      <updated>1720193683651</updated>
+      <updated>1720001744322</updated>
     </task>
-    <task id="LOCAL-00017" summary="updated the Video class">
+    <task id="LOCAL-00017" summary="new account panel">
       <option name="closed" value="true" />
-      <created>1720193760079</created>
+      <created>1720002934862</created>
       <option name="number" value="00017" />
       <option name="presentableId" value="LOCAL-00017" />
       <option name="project" value="LOCAL" />
-      <updated>1720193760079</updated>
+      <updated>1720002934862</updated>
     </task>
-    <task id="LOCAL-00018" summary="created the MongoDb class">
+    <task id="LOCAL-00018" summary="uhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh">
       <option name="closed" value="true" />
-      <created>1720193904495</created>
+      <created>1720019845674</created>
       <option name="number" value="00018" />
       <option name="presentableId" value="LOCAL-00018" />
       <option name="project" value="LOCAL" />
-      <updated>1720193904495</updated>
+      <updated>1720019845674</updated>
     </task>
-    <task id="LOCAL-00019" summary="Updated the Comment class">
+    <task id="LOCAL-00019" summary="well I think it worked? VLCJ lezz go???">
       <option name="closed" value="true" />
-      <created>1720194100990</created>
+      <created>1720022868015</created>
       <option name="number" value="00019" />
       <option name="presentableId" value="LOCAL-00019" />
       <option name="project" value="LOCAL" />
-      <updated>1720194100990</updated>
+      <updated>1720022868015</updated>
     </task>
-    <task id="LOCAL-00020" summary="Updated the Client class">
+    <task id="LOCAL-00020" summary="The media player finally FUCKING WORKS!!!!!&#10;(I will hang someone)">
       <option name="closed" value="true" />
-      <created>1720194180397</created>
+      <created>1720034246842</created>
       <option name="number" value="00020" />
       <option name="presentableId" value="LOCAL-00020" />
       <option name="project" value="LOCAL" />
-      <updated>1720194180397</updated>
+      <updated>1720034246842</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="added some more things to the video panel">
+      <option name="closed" value="true" />
+      <created>1720079349613</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1720079349613</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Created the whole &quot;upload video&quot; part">
+      <option name="closed" value="true" />
+      <created>1720093460393</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1720093460393</updated>
+    </task>
+    <task id="LOCAL-00023" summary="I literally forgor what part I did">
+      <option name="closed" value="true" />
+      <created>1720161600745</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1720161600745</updated>
+    </task>
+    <task id="LOCAL-00024" summary="developed the Channel Panel thingy.">
+      <option name="closed" value="true" />
+      <created>1720165444786</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1720165444786</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Created the CommentComponent for... comments... duh">
+      <option name="closed" value="true" />
+      <created>1720166395412</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1720166395412</updated>
+    </task>
+    <task id="LOCAL-00026" summary="added some functions to the video player">
+      <option name="closed" value="true" />
+      <created>1720249903204</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1720249903204</updated>
+    </task>
+    <task id="LOCAL-00027" summary="added some more functions to the ChannelPanel">
+      <option name="closed" value="true" />
+      <created>1720254545606</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1720254545606</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Added the whole ID thing">
+      <option name="closed" value="true" />
+      <created>1720257138032</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1720257138032</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Updated the ID thing to be FANCY">
+      <option name="closed" value="true" />
+      <created>1720257890100</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1720257890100</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Updated the code to use Static CCM">
+      <option name="closed" value="true" />
+      <created>1720268110113</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1720268110113</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Updated and implemented the Log in function">
+      <option name="closed" value="true" />
+      <created>1720282462897</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1720282462897</updated>
+    </task>
+    <task id="LOCAL-00032" summary="tbh at this point I don even remember what I did">
+      <option name="closed" value="true" />
+      <created>1720287641311</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1720287641311</updated>
+    </task>
+    <task id="LOCAL-00033" summary="added thumbnail support">
+      <option name="closed" value="true" />
+      <created>1720288819946</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1720288819946</updated>
+    </task>
+    <task id="LOCAL-00034" summary="added the select file function&#10;(so your lazy ass doesn't have to copy and paste file paths all the time)">
+      <option name="closed" value="true" />
+      <created>1720351188230</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1720351188230</updated>
+    </task>
+    <task id="LOCAL-00035" summary="I think I fixed an issue with channels always showing the loged in channel">
+      <option name="closed" value="true" />
+      <created>1720358667519</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1720358667519</updated>
+    </task>
+    <task id="LOCAL-00036" summary="fixed an issue with likes and dislikes">
+      <option name="closed" value="true" />
+      <created>1720359025695</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1720359025695</updated>
+    </task>
+    <task id="LOCAL-00037" summary="trying to implement the ability to view a channels videos">
+      <option name="closed" value="true" />
+      <created>1720362174399</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1720362174399</updated>
+    </task>
+    <task id="LOCAL-00038" summary="fixed the dynamic channel page thingy">
+      <option name="closed" value="true" />
+      <created>1720368872511</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1720368872511</updated>
+    </task>
+    <task id="LOCAL-00039" summary="made the whole search video thingy">
+      <option name="closed" value="true" />
+      <created>1720386237888</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1720386237888</updated>
+    </task>
+    <task id="LOCAL-00040" summary="implementing the comment thing">
+      <option name="closed" value="true" />
+      <created>1720422757880</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1720422757880</updated>
+    </task>
+    <task id="LOCAL-00041" summary="final commit">
+      <option name="closed" value="true" />
+      <created>1720514641106</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1720514641106</updated>
+    </task>
+    <task id="LOCAL-00042" summary="The real final commit">
+      <option name="closed" value="true" />
+      <created>1720514777963</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1720514777963</updated>
+    </task>
+    <task id="LOCAL-00043" summary="minor fixes">
+      <option name="closed" value="true" />
+      <created>1720521641883</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1720521641883</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="initial coomit" />
-    <MESSAGE value="initial coomit 2! (I fucking love how intelij just makes up random files, like where TF did this one come from)" />
-    <MESSAGE value="Created the main classes" />
-    <MESSAGE value="the main classes defined" />
-    <MESSAGE value="Added the email and password variable to the User class &#10;(I forgor)" />
-    <MESSAGE value="Added the &quot;correct&quot; type for User Icon and Video thumbnail.&#10;(these are still prone to change)" />
-    <MESSAGE value="fixed the space thingy on the comments&#10;(not of any bloody importance... I'm just hella autistic :3)" />
-    <MESSAGE value="Just cleaning up" />
-    <MESSAGE value="Configured a type for the video file in the Video class." />
-    <MESSAGE value="Removed the Blob videFile variable form the Video class &#10;(we'll just save the video locally fuck this shit)" />
-    <MESSAGE value="initial commit of the Client and Server Branch&#10;(This branch is dedicated to developing the server and client side of the program)" />
-    <MESSAGE value="Implemented the Server and Client Class.&#10;(for the time being the Client can only send a message which the server prints, this is just a simple test and will be changed)" />
-    <MESSAGE value="Tested the Client and Server in the Main file&#10;It wowked :3" />
-    <MESSAGE value="Implimented the MangoDB database" />
-    <MESSAGE value="updated the Build_gradle file" />
-    <MESSAGE value="updated the User class" />
-    <MESSAGE value="updated the Video class" />
-    <MESSAGE value="created the MongoDb class" />
-    <MESSAGE value="Updated the Comment class" />
-    <MESSAGE value="Updated the Client class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated the Client class" />
+    <MESSAGE value="well I think it worked? VLCJ lezz go???" />
+    <MESSAGE value="The media player finally FUCKING WORKS!!!!!&#10;(I will hang someone)" />
+    <MESSAGE value="added some more things to the video panel" />
+    <MESSAGE value="Created the whole &quot;upload video&quot; part" />
+    <MESSAGE value="I literally forgor what part I did" />
+    <MESSAGE value="developed the Channel Panel thingy." />
+    <MESSAGE value="Created the CommentComponent for... comments... duh" />
+    <MESSAGE value="added some functions to the video player" />
+    <MESSAGE value="added some more functions to the ChannelPanel" />
+    <MESSAGE value="Added the whole ID thing" />
+    <MESSAGE value="Updated the ID thing to be FANCY" />
+    <MESSAGE value="Updated the code to use Static CCM" />
+    <MESSAGE value="Updated and implemented the Log in function" />
+    <MESSAGE value="tbh at this point I don even remember what I did" />
+    <MESSAGE value="added thumbnail support" />
+    <MESSAGE value="added the select file function&#10;(so your lazy ass doesn't have to copy and paste file paths all the time)" />
+    <MESSAGE value="I think I fixed an issue with channels always showing the loged in channel" />
+    <MESSAGE value="fixed an issue with likes and dislikes" />
+    <MESSAGE value="trying to implement the ability to view a channels videos" />
+    <MESSAGE value="fixed the dynamic channel page thingy" />
+    <MESSAGE value="made the whole search video thingy" />
+    <MESSAGE value="implementing the comment thing" />
+    <MESSAGE value="final commit" />
+    <MESSAGE value="The real final commit" />
+    <MESSAGE value="minor fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor fixes" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TermProject$Main.ic" NAME="Main Coverage Results" MODIFIED="1720453934701" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
