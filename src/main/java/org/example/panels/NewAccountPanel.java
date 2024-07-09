@@ -80,22 +80,29 @@ public class NewAccountPanel  extends JPanel
         {
             if (!PFPPath.equals("") && !nametext.getText().equals("") && !passwordtext.getText().equals("") && !emailtext.getText().equals(""))
             {
-                if (isValidEmail(emailtext.getText()))
+                if(CCM.findUserById(CCM.users, nametext.getText()) == null)
                 {
-                    ImageIcon pfp = new ImageIcon(PFPPath);
-                    CCM.activeUser = new User(nametext.getText(), emailtext.getText(), passwordtext.getText(), new ArrayList<String>(), new ArrayList<String>(), new ArrayList<String>(), pfp);
-                    addUsersToArrayList(CCM.users, new User(nametext.getText(), emailtext.getText(), passwordtext.getText(), new ArrayList<String>(), new ArrayList<String>(), new ArrayList<String>(), pfp));
-                    for (int i = 0; i < CCM.users.size(); i++)
+                    if (isValidEmail(emailtext.getText()))
                     {
-                        System.out.println(CCM.users.get(i).GetID());
+                        ImageIcon pfp = new ImageIcon(PFPPath);
+                        CCM.activeUser = new User(nametext.getText(), emailtext.getText(), passwordtext.getText(), new ArrayList<String>(), new ArrayList<String>(), new ArrayList<String>(), pfp);
+                        addUsersToArrayList(CCM.users, new User(nametext.getText(), emailtext.getText(), passwordtext.getText(), new ArrayList<String>(), new ArrayList<String>(), new ArrayList<String>(), pfp));
+                        for (int i = 0; i < CCM.users.size(); i++)
+                        {
+                            System.out.println(CCM.users.get(i).GetID());
+                        }
+                        setVisible(false);
+                        gui.mainDashboardPanel.refresh();
+                        gui.mainDashboardPanel.setVisible(true);
                     }
-                    setVisible(false);
-                    gui.mainDashboardPanel.refresh();
-                    gui.mainDashboardPanel.setVisible(true);
+                    else
+                    {
+                        statues.setText("Please enter a valid Email");
+                    }
                 }
                 else
                 {
-                    statues.setText("Please enter a valid Email");
+                    statues.setText("UserName already taken");
                 }
             }
             else
