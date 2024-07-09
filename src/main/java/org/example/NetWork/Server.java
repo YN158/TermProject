@@ -1,5 +1,7 @@
 package org.example.NetWork;
 
+import javax.swing.*;
+import java.awt.*;
 import java.io.*;
 import java.net.*;
 
@@ -7,18 +9,40 @@ public class Server {
     private static final int SERVER_PORT = 8080;
     private static final String VIDEO_FOLDER = "C:\\Users\\Lenovo\\Desktop\\Server\\";
 
+    static JFrame frame;
+    static JLabel label;
+    static JLabel label2;
+
     public static void main(String[] args)
     {
+
+        frame = new JFrame("Server");
+
+        label = new JLabel();
+        label.setBounds(200, 130, 400, 50);
+        label2 = new JLabel();
+        label2.setBounds(200, 200, 400, 50);
+        frame.add(label);
+        frame.add(label2);
+
+
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setLayout(null);
+        frame.setSize(700, 400);
+        frame.setVisible(true);
+
+
+
         try {
             printIPAddress();
             ServerSocket serverSocket = new ServerSocket(SERVER_PORT);
-            System.out.println("Server started. Listening on port " + SERVER_PORT);
+            label.setText("Server started. Listening on port " + SERVER_PORT);
 
             while (true)
             {
                 // Wait for a client connection
                 Socket clientSocket = serverSocket.accept();
-                System.out.println("Client connected: " + clientSocket.getInetAddress().getHostAddress());
+                label.setText("Client connected: " + clientSocket.getInetAddress().getHostAddress());
 
                 // Handle the client connection in a separate thread
                 new ClientHandler(clientSocket).start();
@@ -57,7 +81,7 @@ public class Server {
                     // Send a video to the client
                     sendVideo(dis, dos);
                 } else {
-                    System.out.println("Invalid operation received from the client.");
+                    label.setText("Invalid operation received from the client.");
                 }
 
                 dis.close();
@@ -85,7 +109,7 @@ public class Server {
                 fos.write(buffer, 0, bytesRead);
             }
             fos.close();
-            System.out.println("Video received successfully: " + file.getAbsolutePath());
+            label.setText("Video received successfully: " + file.getAbsolutePath());
         }
 
         private void sendVideo(DataInputStream dis, DataOutputStream dos) throws IOException
@@ -104,7 +128,7 @@ public class Server {
             }
             dos.flush();
             fis.close();
-            System.out.println("Video sent successfully to the client.");
+            label.setText("Video sent successfully to the client.");
         }
     }
 
@@ -113,11 +137,11 @@ public class Server {
         try
         {
             InetAddress localHost = InetAddress.getLocalHost();
-            System.out.println("Server's IP address is: " + localHost.getHostAddress());
+            label2.setText("Server's IP address is: " + localHost.getHostAddress());
         }
         catch (UnknownHostException e)
         {
-            System.out.println("Unable to get local host IP address.");
+            label2.setText("Unable to get local host IP address.");
             e.printStackTrace();
         }
     }
