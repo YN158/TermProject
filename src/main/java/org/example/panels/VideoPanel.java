@@ -291,7 +291,11 @@ public class VideoPanel extends JPanel
         commentComps = new ArrayList<CommentComponent>();
 
         videoTitle.setText(CCM.activeVideo.GetTitle());
-        Client.receiveVideo(CCM.activeVideo.GetID());
+
+        if (CCM.isFilePresent("D:\\University\\Advanced Programming\\Assignments\\TermProject\\TermProject\\Videos\\" + CCM.activeVideo.GetID() + ".mp4"))
+        {
+            Client.receiveVideo(CCM.activeVideo.GetID());
+        }
         videoDescription.setText(CCM.activeVideo.GetDescription());
         pfp.setIcon(CCM.activeUser.getIcon());
         viewChannel.setText(CCM.activeVideo.Getuploader());
