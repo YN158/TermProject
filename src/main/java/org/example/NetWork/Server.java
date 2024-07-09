@@ -1,71 +1,139 @@
 package org.example.NetWork;
 
+import javax.swing.*;
+import java.awt.*;
 import java.io.*;
 import java.net.*;
 
-import com.mongodb.ConnectionString;
-import com.mongodb.MongoClientSettings;
-import com.mongodb.MongoException;
-import com.mongodb.ServerApi;
-import com.mongodb.ServerApiVersion;
-import com.mongodb.client.MongoClient;
-import com.mongodb.client.MongoClients;
-import com.mongodb.client.MongoDatabase;
-import org.bson.Document;
+public class Server {
+    private static final int SERVER_PORT = 8080;
+    private static final String VIDEO_FOLDER = "C:\\Users\\Lenovo\\Desktop\\Server\\";
 
-public class Server implements Runnable {
-    public static final int port = 9090;
+    static JFrame frame;
+    static JLabel label;
+    static JLabel label2;
 
-    //mongodb password: 691NfDk7mwCNeTJt
-    //mangodb username: bluemustardsauce
+    public static void main(String[] args)
+    {
 
-    public static void main(String[] args) {
-        String connectionString = "mongodb+srv://bluemustardsauce:691NfDk7mwCNeTJt@termproject.xdwhar0.mongodb.net/?appName=TermProject";
-        ServerApi serverApi = ServerApi.builder()
-                .version(ServerApiVersion.V1)
-                .build();
-        MongoClientSettings settings = MongoClientSettings.builder()
-                .applyConnectionString(new ConnectionString(connectionString))
-                .serverApi(serverApi)
-                .build();
-        // Create a new client and connect to the server
-        try (MongoClient mongoClient = MongoClients.create(settings)) {
-            try {
-                // Send a ping to confirm a successful connection
-                MongoDatabase database = mongoClient.getDatabase("admin");
-                database.runCommand(new Document("ping", 1));
-                System.out.println("Pinged your deployment. You successfully connected to MongoDB!");
-            } catch (MongoException e) {
-                e.printStackTrace();
-            }
-        }
-    }
+        frame = new JFrame("Server");
 
-    public void run() {
-        try{
-            ServerSocket server = new ServerSocket(port);
+        label = new JLabel();
+        label.setBounds(200, 130, 400, 50);
+        label2 = new JLabel();
+        label2.setBounds(200, 200, 400, 50);
+        frame.add(label);
+        frame.add(label2);
+
+
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setLayout(null);
+        frame.setSize(700, 400);
+        frame.setVisible(true);
+
+
+
+        try {
+            printIPAddress();
+            ServerSocket serverSocket = new ServerSocket(SERVER_PORT);
+            label.setText("Server started. Listening on port " + SERVER_PORT);
 
             while (true)
             {
-                final Socket client = server.accept();
-                new Thread() {
-                    public void run() {
-                        try{
-                            ObjectInputStream in =
-                                    new ObjectInputStream( client.getInputStream() );
-                            String msg = (String) in.readObject();
-                            System.out.println(msg + " nn");
-                            if (msg.equals("Hello !"))
-                            {
-                                System.out.println("baaaaa");
-                            }
-                        }
-                        catch(Exception e){System.err.println(e);}
-
-                    }}.start();
+                Socket clientSocket = serverSocket.accept();
+                label.setText("Client connected: " + clientSocket.getInetAddress().getHostAddress());
+                new ClientHandler(clientSocket).start();
             }
         }
-        catch(IOException e){System.err.println(e);}
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
     }
 
+    private static class ClientHandler extends Thread
+    {
+        private final Socket clientSocket;
+
+        public ClientHandler(Socket socket)
+        {
+            this.clientSocket = socket;
+        }
+
+        @Override
+        public void run()
+        {
+            try
+            {
+                DataInputStream dis = new DataInputStream(clientSocket.getInputStream());
+                DataOutputStream dos = new DataOutputStream(clientSocket.getOutputStream());
+
+                String operation = dis.readUTF();
+
+                if (operation.equalsIgnoreCase("send")) {
+                    receiveVideo(dis, dos);
+                } else if (operation.equalsIgnoreCase("receive")) {
+                    sendVideo(dis, dos);
+                } else {
+                    label.setText("Invalid operation received from the client.");
+                }
+
+                dis.close();
+                dos.close();
+                clientSocket.close();
+            }
+            catch (IOException e)
+            {
+                e.printStackTrace();
+            }
+        }
+
+        private void receiveVideo(DataInputStream dis, DataOutputStream dos) throws IOException
+        {
+
+            String videoName = dis.readUTF();
+            File file = new File(VIDEO_FOLDER + videoName);
+
+            FileOutputStream fos = new FileOutputStream(file);
+            byte[] buffer = new byte[4096];
+            int bytesRead;
+            while ((bytesRead = dis.read(buffer)) != -1)
+            {
+                fos.write(buffer, 0, bytesRead);
+            }
+            fos.close();
+            label.setText("Video received successfully: " + file.getAbsolutePath());
+        }
+
+        private void sendVideo(DataInputStream dis, DataOutputStream dos) throws IOException
+        {
+            String videoName = dis.readUTF();
+            File file = new File(VIDEO_FOLDER + videoName);
+
+            FileInputStream fis = new FileInputStream(file);
+            byte[] buffer = new byte[4096];
+            int bytesRead;
+            while ((bytesRead = fis.read(buffer)) != -1)
+            {
+                dos.write(buffer, 0, bytesRead);
+            }
+            dos.flush();
+            fis.close();
+            label.setText("Video sent successfully to the client.");
+        }
+    }
+
+    public static void printIPAddress()
+    {
+        try
+        {
+            InetAddress localHost = InetAddress.getLocalHost();
+            label2.setText("Server's IP address is: " + localHost.getHostAddress());
+        }
+        catch (UnknownHostException e)
+        {
+            label2.setText("Unable to get local host IP address.");
+            e.printStackTrace();
+        }
+    }
 }
