@@ -47,7 +47,7 @@ public class VideoPanel extends JPanel
     JTextField writeComment;
     JButton postComment;
     ArrayList<CommentComponent> commentComps;
-    JLabel commentSection;                                    //place holder
+    JTextField commentSection;                                    //place holder
 
     public VideoPanel(GUI g)
     {
@@ -270,7 +270,9 @@ public class VideoPanel extends JPanel
         });
         panelWest.add(postComment);
 
-        commentSection = new JLabel();
+        commentSection = new JTextField();
+        commentSection.setEditable(false);
+        commentSection.setPreferredSize(new Dimension(100, 800));
         panelEast.add(commentSection);
 
         setVisible(false);
@@ -312,7 +314,7 @@ public class VideoPanel extends JPanel
 
         for (int i = 0; i < commentComps.size(); i++)
         {
-            commentSection.setText(commentComps.get(i).viewAuthorChannel.getText() + "\n" + commentComps.get(i).commentBody.getText() + "\n");
+            commentSection.setText(commentSection.getText() +"|-----| Author:  " + commentComps.get(i).viewAuthorChannel.getText() + "   Body:  " + commentComps.get(i).commentBody.getText() + "\n");
         }
         System.out.println(panelEast.getComponentCount());
     }
