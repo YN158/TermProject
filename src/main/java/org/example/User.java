@@ -98,37 +98,4 @@ public class User implements Cloneable
     {
         return new User(this.ID, this.email, this.password, this.videoIDs, this.subscriptionIDs, this.subscriberIDs, this.icon);
     }
-
-
-    public String getID()
-    {
-        return ID;
-    }
-
-    public String getEmail()
-    {
-        return email;
-    }
-
-    public String getPassword()
-    {
-        return password;
-    }
-
-    public ArrayList<String> getvideoIDs()
-    {
-        return videoIDs;
-    }
-
-    public ArrayList<String> getsubscriberIDs ()
-    {
-        return subscriberIDs;
-    }
-
-    public ArrayList<String> getsubscriptionIDs ()
-    {
-        return subscriptionIDs;
-    }
-
-
 }
