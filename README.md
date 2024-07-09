@@ -10,7 +10,7 @@ A simple Java Desktop application for sharing videos... with the people connecte
 ## Features
 You can create multiple accounts and upload videos and see other peoples accounts and watch videos and comment (I mean its yt thats all it does) oh and you used to be able to make playlists but Idk what I did but that  no work no more :3
 
-## More detailed explanation in regard to the code architecture... you nerds
+## More detailed explanation in regard to the code architecture
 
 The program is built around two simple main Classes, the GUI class and the CCM or Central Class Management class.
 The GUI hold the panels (such as video, channel and much more) and their respected functions.
@@ -36,8 +36,8 @@ And the client can also send videos and receive them from the Server by using th
 
 ## Help
 
-idk send me a pigeon
-https://irancrisisline.org
+* idk send me a pigeon
+* https://irancrisisline.org
 
 ## Authors
 

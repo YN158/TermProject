@@ -45,7 +45,7 @@ public class VideoComponent extends JPanel
         thumbnail.setPreferredSize(new Dimension(50, 50));
 
         add(viewVideo, BorderLayout.CENTER);
-        add(viewUploaderChannel, BorderLayout.SOUTH);
+        add(viewUploaderChannel, BorderLayout.EAST);
         add(thumbnail, BorderLayout.WEST);
     }
 
