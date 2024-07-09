@@ -40,11 +40,8 @@ public class Server {
 
             while (true)
             {
-                // Wait for a client connection
                 Socket clientSocket = serverSocket.accept();
                 label.setText("Client connected: " + clientSocket.getInetAddress().getHostAddress());
-
-                // Handle the client connection in a separate thread
                 new ClientHandler(clientSocket).start();
             }
         }
@@ -71,14 +68,11 @@ public class Server {
                 DataInputStream dis = new DataInputStream(clientSocket.getInputStream());
                 DataOutputStream dos = new DataOutputStream(clientSocket.getOutputStream());
 
-                // Receive the operation from the client
                 String operation = dis.readUTF();
 
                 if (operation.equalsIgnoreCase("send")) {
-                    // Receive a video from the client
                     receiveVideo(dis, dos);
                 } else if (operation.equalsIgnoreCase("receive")) {
-                    // Send a video to the client
                     sendVideo(dis, dos);
                 } else {
                     label.setText("Invalid operation received from the client.");
@@ -96,11 +90,10 @@ public class Server {
 
         private void receiveVideo(DataInputStream dis, DataOutputStream dos) throws IOException
         {
-            // Receive the video file name from the client
+
             String videoName = dis.readUTF();
             File file = new File(VIDEO_FOLDER + videoName);
 
-            // Receive the video file from the client
             FileOutputStream fos = new FileOutputStream(file);
             byte[] buffer = new byte[4096];
             int bytesRead;
@@ -114,11 +107,9 @@ public class Server {
 
         private void sendVideo(DataInputStream dis, DataOutputStream dos) throws IOException
         {
-            // Receive the video file name from the client
             String videoName = dis.readUTF();
             File file = new File(VIDEO_FOLDER + videoName);
 
-            // Send the video file to the client
             FileInputStream fis = new FileInputStream(file);
             byte[] buffer = new byte[4096];
             int bytesRead;

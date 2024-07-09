@@ -11,18 +11,18 @@ public class Client {
     public static void sendVideo(String videoName) {
         try {
             videoName = videoName + ".mp4";
-            // Connect to the server
+
             Socket socket = new Socket(SERVER_IP, SERVER_PORT);
             DataInputStream dis = new DataInputStream(socket.getInputStream());
             DataOutputStream dos = new DataOutputStream(socket.getOutputStream());
 
-            // Send the "send" operation to the server
+
             dos.writeUTF("send");
 
-            // Send the video file name to the server
+
             dos.writeUTF(videoName);
 
-            // Send the video file to the server
+
             File file = new File(VIDEO_FOLDER + videoName);
             FileInputStream fis = new FileInputStream(file);
             byte[] buffer = new byte[4096];
@@ -46,18 +46,15 @@ public class Client {
     public static void receiveVideo(String videoName) {
         try {
             videoName = videoName + ".mp4";
-            // Connect to the server
+
             Socket socket = new Socket(SERVER_IP, SERVER_PORT);
             DataInputStream dis = new DataInputStream(socket.getInputStream());
             DataOutputStream dos = new DataOutputStream(socket.getOutputStream());
 
-            // Send the "receive" operation to the server
             dos.writeUTF("receive");
 
-            // Send the video file name to the server
             dos.writeUTF(videoName);
 
-            // Receive the video file from the server
             File file = new File(VIDEO_FOLDER + videoName);
             FileOutputStream fos = new FileOutputStream(file);
             byte[] buffer = new byte[4096];
