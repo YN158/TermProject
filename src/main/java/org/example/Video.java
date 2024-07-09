@@ -38,6 +38,10 @@ public class Video
         return title;
     }
 
+    public String GetVideoPath() {
+        return videoPath;
+    }
+
     public String GetDescription()
     {
         return description;
@@ -56,6 +60,10 @@ public class Video
     public String Getuploader()
     {
         return channelID;
+    }
+
+    public ArrayList<String> GetViewerIDs() {
+        return viewerIDs;
     }
 
     public ImageIcon GetThumbnail()
