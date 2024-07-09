@@ -24,7 +24,9 @@ public class VideoComponent extends JPanel
         viewVideo.addActionListener(e ->
         {
             gui.videoPanel.playVideo("D:\\University\\Advanced Programming\\Assignments\\TermProject\\TermProject\\Videos\\" + videoID + ".mp4");
+            gui.searchedPanel.setVisible(false);
             gui.mainDashboardPanel.setVisible(false);
+            gui.channelPanel.setVisible(false);
             gui.videoPanel.setVisible(true);
             gui.videoPanel.refresh();
         });
@@ -32,8 +34,8 @@ public class VideoComponent extends JPanel
         viewUploaderChannel.addActionListener(e ->
         {
             gui.videoPanel.setVisible(false);
+            gui.searchedPanel.setVisible(false);
             gui.mainDashboardPanel.setVisible(false);
-            gui.channelPanel.setVisible(false);
 
             gui.channelPanel.refresh(CCM.findUserById(CCM.users, vid.Getuploader()));
             gui.channelPanel.setVisible(true);

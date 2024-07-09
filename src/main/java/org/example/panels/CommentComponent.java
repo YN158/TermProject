@@ -17,8 +17,9 @@ public class CommentComponent extends JPanel
         setLayout(new BorderLayout());
 
         viewAuthorChannel = new JButton(comment.GetUserID());
-        viewAuthorChannel.addActionListener(e -> {
-            gui.videoPanel.setVisible(false);
+        viewAuthorChannel.addActionListener(e ->
+        {
+            gui.setAllPanelsInvisible();
             gui.channelPanel.refresh(CCM.findUserById(CCM.users, comment.GetUserID()));
             gui.channelPanel.setVisible(true);
         });

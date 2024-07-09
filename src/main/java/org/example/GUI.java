@@ -31,6 +31,10 @@ public class GUI                           //this class holds all the needed pan
         uploadVideoPanel = new UploadVideoPanel(this);
         searchedPanel = new SearchedPanel(this);
 
+        setAllPanelsInvisible();
+
+        startPanel.setVisible(true);
+
         frame.add(startPanel);
         frame.add(videoPanel);
         frame.add(mainDashboardPanel);
@@ -48,5 +52,17 @@ public class GUI                           //this class holds all the needed pan
         frame.setExtendedState(frame.getExtendedState() | JFrame.MAXIMIZED_BOTH);
 
         System.out.println(frame.getSize());
+    }
+
+    public void setAllPanelsInvisible()
+    {
+        startPanel.setVisible(false);
+        videoPanel.setVisible(false);
+        mainDashboardPanel.setVisible(false);
+        newAccountPanel.setVisible(false);
+        channelPanel.setVisible(false);
+        loginPanel.setVisible(false);
+        uploadVideoPanel.setVisible(false);
+        searchedPanel.setVisible(false);
     }
 }
