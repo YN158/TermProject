@@ -20,4 +20,49 @@ public class Video
     {
 
     }
+
+    public String getID()
+    {
+        return ID;
+    }
+
+    public ArrayList<String> getCommentIDs()
+    {
+        return commentIDs;
+    }
+
+    public ArrayList<String> getViewerIDs()
+    {
+        return viewerIDs;
+    }
+
+    public Image getThumbnail()
+    {
+        return thumbnail;
+    }
+
+    public int getDislike()
+    {
+        return dislike;
+    }
+
+    public int getLikes()
+    {
+        return likes;
+    }
+
+    public String getChannelID()
+    {
+        return channelID;
+    }
+
+    public String getDescription()
+    {
+        return description;
+    }
+
+    public String getTitle()
+    {
+        return title;
+    }
 }

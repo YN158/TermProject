@@ -18,4 +18,42 @@ public class User
     {
 
     }
+
+
+    public String getID()
+    {
+        return ID;
+    }
+
+    public String getEmail()
+    {
+        return email;
+    }
+
+    public String getPassword()
+    {
+        return password;
+    }
+
+    public Image getIcon()
+    {
+        return icon;
+    }
+
+    public ArrayList<String> getvideoIDs()
+    {
+        return videoIDs;
+    }
+
+    public ArrayList<String> getsubscriberIDs ()
+    {
+        return subscriberIDs;
+    }
+
+    public ArrayList<String> getsubscriptionIDs ()
+    {
+        return subscriptionIDs;
+    }
+
+
 }
