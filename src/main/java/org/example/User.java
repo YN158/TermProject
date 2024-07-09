@@ -115,11 +115,6 @@ public class User implements Cloneable
         return password;
     }
 
-    public Image getIcon()
-    {
-        return icon;
-    }
-
     public ArrayList<String> getvideoIDs()
     {
         return videoIDs;
