@@ -40,4 +40,24 @@ public class Comment
     {
         return ID;
     }
+
+    public String getID() {
+        return ID;
+    }
+
+    public String getBody() {
+        return body;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public String getUserID() {
+        return userID;
+    }
+
+    public String getVideoID() {
+        return videoID;
+    }
 }
