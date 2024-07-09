@@ -22,6 +22,8 @@ public class StartPanel extends JPanel
         {
             setLayout(null);
 
+            IDgenerator.CommentGetUniqueId();
+            IDgenerator.VideoGetUniqueId();
 
             button1 = new JButton("LOG IN");
             button1.setBounds(160,320, 250, 40);

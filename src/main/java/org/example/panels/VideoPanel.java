@@ -34,6 +34,7 @@ public class VideoPanel extends JPanel
 
     JLabel videoTitle;
     JLabel videoDescription;
+    JButton viewChannel;
     JButton subscribe;
     JButton pause;
     JButton like;
@@ -158,9 +159,20 @@ public class VideoPanel extends JPanel
         videoDescription = new JLabel();
         panelSouth.add(videoDescription);
 
-        subscribe = new JButton();
-        panelSouth.add(subscribe);
+        viewChannel = new JButton();
+        panelSouth.add(viewChannel);
+        viewChannel.addActionListener(e ->
+        {
+            gui.channelPanel.setVisible(true);
+            gui.channelPanel.refresh(CCM.findUserById(CCM.users, CCM.activeVideo.Getuploader()));
+            mediaPlayerComponent.mediaPlayer().controls().setPause(true);
+            liked = false;
+            disliked = false;
+            setVisible(false);
+        });
 
+        subscribe = new JButton("Subscribe");
+        panelSouth.add(subscribe);
         subscribe.addActionListener(e ->
         {
             boolean issubscribed = false;
@@ -168,6 +180,7 @@ public class VideoPanel extends JPanel
             {
                 CCM.activeUser.addSubscription(CCM.activeVideo.Getuploader());
                 issubscribed = false;
+                subscribe.setText("Subscribed!");
             }
 
         });
@@ -279,7 +292,7 @@ public class VideoPanel extends JPanel
         videoTitle.setText(CCM.activeVideo.GetTitle());
         videoDescription.setText(CCM.activeVideo.GetDescription());
         pfp.setIcon(CCM.activeUser.getIcon());
-        subscribe.setText(CCM.activeVideo.Getuploader());
+        viewChannel.setText(CCM.activeVideo.Getuploader());
         accountButton.setText(CCM.activeUser.GetID());
         dislike.setText("Dislikes = " + CCM.activeVideo.GetDislikes());
         like.setText("Likes = " + CCM.activeVideo.GetLikes());
